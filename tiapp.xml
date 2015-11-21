@@ -5,7 +5,7 @@
     <version>1.0</version>
     <publisher>motiurrahman</publisher>
     <url>http://</url>
-    <description/>
+    <description>undefined</description>
     <copyright>2015 by motiurrahman</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
@@ -38,7 +38,31 @@
             </dict>
         </plist>
     </ios>
-    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest>
+            <application android:theme="@style/appcelerator">
+                <!-- Replace "PASTE YOUR GOOGLE MAPS API KEY HERE" with the Google API key you obtained -->
+                <meta-data
+                    android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyACkaMjxhKbemYoBxMM4g05FSIPv-_59kg"/>
+            </application>
+            <uses-sdk android:minSdkVersion="14"/>
+            <uses-sdk android:targetSdkVersion="23"/>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+            <uses-permission android:name="android.permission.GET_TASKS"/>
+            <!-- GOOGLE MAP REQUIREMENTS -->
+            <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+            <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+            <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+            <uses-permission android:name="com.appcelerator.directory.permission.MAPS_RECEIVE"/>
+            <permission
+                android:name="com.appcelerator.directory.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+        </manifest>
+    </android>
     <mobileweb>
         <precache/>
         <splash>
@@ -55,7 +79,7 @@
         <target device="mobileweb">true</target>
         <target device="windows">false</target>
     </deployment-targets>
-    <sdk-version>5.0.2.GA</sdk-version>
+    <sdk-version>5.1.0.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
