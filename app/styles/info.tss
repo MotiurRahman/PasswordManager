@@ -1,38 +1,15 @@
-"#symbol": {
-	left: 15,
-	color: "black",
-	font: { fontSize: 34, fontWeight: 'bold' }
-},
-"#symbol[platform=android]": {
-	left: 0
+".container[platform=ios]": {
+	top: 20,
+	backgroundColor:"white",
+	statusBarStyle:Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
+	orientationModes: [Ti.UI.PORTRAIT,Ti.UI.LANDSCAPE_LEFT,Ti.UI.LANDSCAPE_RIGHT,Ti.UI.UPSIDE_PORTRAIT],
+	navBarHidden: true,
 }
-"#atomProperties": {
-	top: 0, left: 80, right: 0, bottom: 0,
-	layout: "vertical"
-},
-"#atomProperties[platform=android]": {
-	left: 65
-},
-"#name": {
-	left: 0, top: 4,
-	color: "black",
-	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
-	font: { fontSize: 16 }
-},
-"#secondLine": {
-	left: 0, right: 0,
-	layout: "horizontal"
-},
-".fieldLabel": {
-	color:"#999"
-},
-".line2": {
-	font: { fontSize: 10 }
-},
-"#number": {
-	width: 30,
-	color: 'red'
-},
-"#mass": {
-	color: "blue"
+
+".container[platform=android]": {
+	top: 20,
+	backgroundColor:"white",
+	orientationModes: [Ti.UI.PORTRAIT,Ti.UI.LANDSCAPE_LEFT,Ti.UI.LANDSCAPE_RIGHT],
+	navBarHidden: true,
+	exitOnClose: true
 }

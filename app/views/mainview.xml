@@ -1,9 +1,12 @@
 <Alloy>
 	<View id="mainView">
 		<View id="mainTopBar">
-			<View id="menuButton"/>
+			<View id="menuButtonLeft"/>
+			<View id="menuButtonRight"/>
+			
 		</View>
-		<TableView>
-		</TableView>
+		<ListView id="elementsList">
+			<ListSection name="elements" />
+		</ListView>
 	</View>
 </Alloy>

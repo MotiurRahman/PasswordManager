@@ -1,5 +1,0 @@
-<Alloy>
-	<Window class="container" id="win">
-		<Require type="widget" src="com.alcoapps.drawermenu" id="drawermenu"/>
-	</Window>
-</Alloy>

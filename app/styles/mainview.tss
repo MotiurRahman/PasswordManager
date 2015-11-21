@@ -6,9 +6,16 @@
 	width: Ti.UI.FILL,
 	height: "60dp",
 	backgroundColor: '#5B96B2',
-	layout: 'horizontal'
+	//backgroundColor: 'red',
+	//layout: 'horizontal'
 },
-"#menuButton":{
+"#menuButtonLeft":{
 	width: "60dp",
-	height: "60dp"
+	height: "60dp",
+	left:0
+}
+"#menuButtonRight":{
+	width: "60dp",
+	height: "60dp",
+	right:0
 }
