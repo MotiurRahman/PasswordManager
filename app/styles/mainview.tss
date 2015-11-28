@@ -5,17 +5,32 @@
 "#mainTopBar":{
 	width: Ti.UI.FILL,
 	height: "60dp",
-	backgroundColor: '#5B96B2',
-	//backgroundColor: 'red',
-	//layout: 'horizontal'
+	backgroundColor: '#5B96B2'
 },
 "#menuButtonLeft":{
 	width: "60dp",
 	height: "60dp",
-	left:0
+	left: 0
 }
 "#menuButtonRight":{
 	width: "60dp",
 	height: "60dp",
-	right:0
+	right: 0
 }
+
+"#mainTopBar[formFactor=tablet]":{
+	width: Ti.UI.FILL,
+	height: "80dp",
+	backgroundColor: '#5B96B2'
+},
+"#menuButtonLeft[formFactor=tablet]":{
+	width: "80dp",
+	height: "80dp",
+	left: 0
+}
+"#menuButtonRight[formFactor=tablet]":{
+	width: "80dp",
+	height: "80dp",
+	right: 0
+}
+

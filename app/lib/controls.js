@@ -49,3 +49,8 @@ exports.getMenuButtonRight = function(args) {
 exports.getConfigView = function() {
 	return Alloy.createController('config');
 };
+
+//Get the Configuration Controller
+exports.getOption = function() {
+	return Alloy.createController('option');
+};

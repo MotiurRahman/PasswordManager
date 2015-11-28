@@ -1,0 +1,20 @@
+<Alloy>
+	<Window>
+		<ScrollView>
+			<View class="container" backgroundColor="#000" layout="vertical">
+
+				<Label id="title_name" top="10" >Title Name</Label>
+				<TextField id= 'txt_Name' top="10"></TextField>
+				<Label id="Email" top="10" >Email</Label>
+				<TextField id= 'txt_email' top="10"></TextField>
+				<Label id="pass" top="10">Password</Label>
+				<TextField id= 'txt_pass' top="10" passwordMask="true"></TextField>
+				<Label id="url" top="10">Site URL</Label>
+				<TextField id= 'txt_url' top="10"></TextField>
+				<Button id="save" title="Save" top="20"  color="#fff"></Button>>
+
+			</View>
+		</ScrollView>
+	</View>
+</Window>>
+</Alloy>

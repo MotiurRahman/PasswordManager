@@ -6,13 +6,13 @@ var mainView = controls.getMainView();
 
 // attach event listener to menu button
 mainView.menuButtonLeft.add(controls.getMenuButtonLeft({
-	h : '60',
-	w : '60'
+	h : '80',
+	w : '80'
 }));
 
 mainView.menuButtonRight.add(controls.getMenuButtonRight({
-	h : '60',
-	w : '60'
+	h : '80',
+	w : '80'
 }));
 
 //Minor changes to click event. Update the menuOpen status;
@@ -23,7 +23,9 @@ mainView.menuButtonLeft.addEventListener('click', function() {
 // method is exposed by widget
 
 mainView.menuButtonRight.addEventListener('click', function() {
-	alert("test");
+	// Alloy.createController('option').getView().open();
+	$.options.show();
+	//alert(data);
 });
 // method is exposed by widget
 
@@ -76,6 +78,22 @@ menuView.menuTable.addEventListener('click', function(e) {
 	}
 	// on Android the event is received by the label, so watch out!
 	Ti.API.info(e.rowData.id);
+});
+
+$.options.addEventListener('click', function(e) {
+	if (e.index == 0) {
+		//alert('general');
+		Alloy.createController('generalPass').getView().open({
+			transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+		});
+
+	} else if (e.index == 1) {
+		Alloy.createController('bankAC').getView().open({
+			transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+		});
+	} else {
+	}
+
 });
 
 //$.index.open();

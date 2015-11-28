@@ -1,22 +1,25 @@
-".container": {
-	backgroundColor: "white"
-}
+".container": {}
 
 "Label":{
 	color: '#fff',
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
-	font: {
-		fontSize: '20dp'
-	},
-	
+	font: 20,
+	left: 20
 },
 "TextField":{
 	color: '#000',
-	left: 20,
-	right: 20,
+	left: 10,
+	right: 10,
 	height: 40,
 	backgroundColor: '#fff'
+}
+'#save':{
+	borderWidth: 2,
+	borderColor: 'green',
+	borderRadius: 10,
+	width: 50,
+	height: 40
 }
 
 'Label[formFactor=tablet]': {
@@ -28,4 +31,12 @@
 },
 'TextField[formFactor=tablet]': {
 	height: 80
+},
+
+'#save[formFactor=tablet]': {
+	borderWidth: 2,
+	borderColor: 'red',
+	borderRadius: 10,
+	width: 150,
+	height: 70
 }

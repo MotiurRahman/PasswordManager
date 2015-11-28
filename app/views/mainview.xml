@@ -3,7 +3,7 @@
 		<View id="mainTopBar">
 			<View id="menuButtonLeft"/>
 			<View id="menuButtonRight"/>
-			
+
 		</View>
 		<ListView id="elementsList">
 			<ListSection name="elements" />

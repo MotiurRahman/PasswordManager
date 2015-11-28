@@ -2,8 +2,8 @@
 	<Window class="container">
 		<View layout="vertical" backgroundColor="#000">
 			<ImageView id="first" image="/images/key.png" width="200" height="200" top="30"></ImageView>>
-			<TextField id='pin' width="200" height="50" top="20" passwordMask="true" backgroundColor="#fff" onReturn="done"></TextField>
-			<Label id="signin" top="20" color="#fff">Create Account</Label>
+			<TextField id='pin' top="20" passwordMask="true" backgroundColor="#fff" onReturn="done"></TextField>
+			<Label id="signin" top="20">Create Account</Label>
 		</View>>
 	</Window>
 </Alloy>
