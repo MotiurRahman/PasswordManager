@@ -1,28 +1,31 @@
 var db = Ti.Database.open('people');
-db.execute('CREATE TABLE IF NOT EXISTS customer(id  integer PRIMARY KEY autoincrement not null,customer_id TEXT,title TEXT,description TEXT)');
+db.execute('CREATE TABLE IF NOT EXISTS general(id  INTEGER PRIMARY KEY autoincrement not null,title TEXT,email TEXT, pass TEXT,account TEXT,pin TEXT, url TEXT)');
 db.close();
 
-exports.add = function(customer_id,title, description) {
+exports.add = function(title, email, pass, account, pin, url, _callBacl) {
 	var db = Ti.Database.open('people');
-	db.execute('INSERT INTO customer (customer_id,title,description) VALUES(?,?,?)', customer_id,title,description);
+	db.execute('INSERT INTO general (title,email,pass,account,pin,url) VALUES(?,?,?,?,?,?)', title, email, pass,account, pin, url);
+	_callBacl('success');
 	db.close();
 };
 
-
 exports.getinfo = function() {
-	var customerInfo = [];
+	var generalInfo = [];
 	var db = Ti.Database.open('people');
-	var result = db.execute('select * from customer');
+	var result = db.execute('select * from general');
 
 	while (result.isValidRow()) {
 
-		customerInfo.push({
+		generalInfo.push({
 
 			id : result.fieldByName('id'),
 			title : result.fieldByName('title'),
-			description:result.fieldByName('description'),
-			customer_id:result.fieldByName('customer_id'),
-			
+			email : result.fieldByName('email'),
+			pass : result.fieldByName('pass'),
+			account : result.fieldByName('account'),
+			pin : result.fieldByName('pin'),
+			url : result.fieldByName('url'),
+
 		});
 		result.next();
 	}
@@ -30,19 +33,18 @@ exports.getinfo = function() {
 	result.close();
 	db.close();
 	//Ti.API.info('stuInfo'+ stuInfo);
-	return customerInfo;
+	return generalInfo;
 };
 
-
-exports.updateinfo = function(title,description,customer_id) {
+exports.updateinfo = function(title, description, customer_id) {
 	var db = Ti.Database.open('people');
-	db.execute('UPDATE customer set title=?,description=? where customer_id=?', title,description,customer_id);
+	db.execute('UPDATE general set title=?,description=? where customer_id=?', title, description, customer_id);
 	db.close();
 };
 
-
-exports.deletinfo = function(customer_id) {
+exports.deletinfo = function(id) {
 	var db = Ti.Database.open('people');
-	db.execute('DELETE FROM customer where customer_id=?', customer_id);
+	db.execute('DELETE FROM general where id=?', id);
+	
 	db.close();
 };

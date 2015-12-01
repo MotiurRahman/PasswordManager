@@ -33,4 +33,7 @@
 	height: "80dp",
 	right: 0
 }
+'Label':{
+	//left: 10
+}
 

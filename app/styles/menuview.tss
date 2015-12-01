@@ -6,6 +6,7 @@
 	width: Ti.UI.FILL,
 	height: "60dp",
 	backgroundColor: '#3D3D3D',
+	//backgroundColor: 'green',
 	layout: 'horizontal'
 },
 ".tableRow":{
@@ -13,7 +14,7 @@
 },
 "#rowContainer":{
 	height: '30dp',
-	layout:'horizontal'
+	layout: 'horizontal'
 },
 ".rowIcon":{
 	left: 5,
@@ -38,10 +39,9 @@
 		fontSize: "15dp"
 	},
 	color: "#000"
-	
 },
 ".menuTable":{
-	separatorStyle:'NONE',
+	separatorStyle: 'NONE',
 	separatorColor: 'transparent',
-	backgroundColor:'#F2F2F2'
+	backgroundColor: '#F2F2F2'
 }

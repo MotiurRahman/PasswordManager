@@ -24,8 +24,13 @@ mainView.menuButtonLeft.addEventListener('click', function() {
 
 mainView.menuButtonRight.addEventListener('click', function() {
 	// Alloy.createController('option').getView().open();
-	$.options.show();
+	//$.options.show();
 	//alert(data);
+
+	Alloy.createController('generalPass').getView().open({
+		transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+	});
+
 });
 // method is exposed by widget
 
@@ -61,16 +66,23 @@ menuView.menuTable.addEventListener('click', function(e) {
 	$.drawermenu.menuOpen = false;
 	//update menuOpen status to prevent inconsistency.
 	if (e.rowData.id === "row1") {
+		Alloy.createController('about/about').getView().open({
+			modal : true
+		});
 		if (activeView != 1) {
-			$.drawermenu.drawermainview.remove(configView.getView());
+			//$.drawermenu.drawermainview.remove(configView.getView());
+
 			activeView = 1;
 		} else {
 			activeView = 1;
 		}
 	}
 	if (e.rowData.id === "row2") {
+		Alloy.createController('setting/setting').getView().open({
+			modal : true
+		});
 		if (activeView != 2) {
-			$.drawermenu.drawermainview.add(configView.getView());
+			//$.drawermenu.drawermainview.add(configView.getView());
 			activeView = 2;
 		} else {
 			activeView = 2;

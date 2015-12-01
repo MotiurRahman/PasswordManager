@@ -10,4 +10,4 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
-var data = "this is globl";
+

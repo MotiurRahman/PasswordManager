@@ -1,0 +1,20 @@
+<Alloy>
+	<Window  title="Password Manager" id="detailWin">
+		<View class="container" layout="vertical">
+			<Label id="title" top="20"></Label>
+			<Label id="email" top="10"></Label>
+			<Label id="pass" top="10"></Label>
+			<Label id="account" top="10"></Label>
+			<Label id="pin" top="10"></Label>
+			<Label id="site" top="10"></Label>
+		</View>
+		<View backgroundColor="gray" width="Ti.UI.Fill" height="140" bottom="0" layout="vertical">
+			<View id="addView" backgroundColor="red" width="Ti.UI.FILL" height="60"></View>
+			<View>
+				<Button  title="Delete" onClick="deleteBtn" left="5"></Button>
+				<Button  title="close" onClick="close"></Button>
+				<Button  title="Update" onClick="update" right="5"></Button>
+			</View>
+		</View>>
+	</Window>>
+</Alloy>

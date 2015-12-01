@@ -2,7 +2,7 @@ var Alloy = require('alloy');
 
 exports.getMainView = function() {
 	return Alloy.createController('mainview');
-	;
+	
 };
 
 exports.getMenuView = function() {

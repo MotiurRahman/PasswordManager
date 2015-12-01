@@ -1,12 +1,18 @@
 <Alloy>
-	<View id="mainView">
+	<View id="mainView" backgroundColor="gray">
 		<View id="mainTopBar">
-			<View id="menuButtonLeft"/>
+			<View id="menuButtonLeft" />
+			<Label id="name">Password Manager</Label>>
 			<View id="menuButtonRight"/>
 
 		</View>
-		<ListView id="elementsList">
+		<ListView id="elementsList" zIndex="1">
+			<SearchBar barColor="#000" />
 			<ListSection name="elements" />
+			<FooterView>
+				<View id='adView' width="Ti.UI.FILL" height="60"></View>
+			</FooterView>
 		</ListView>
+
 	</View>
 </Alloy>

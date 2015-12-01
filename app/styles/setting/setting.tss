@@ -1,19 +1,18 @@
-".container": {}
-
+"#mainView":{
+	layout: 'vertical',
+	backgroundColor: '#cacaca'
+},
 "#mainTopBar":{
 	width: Ti.UI.FILL,
 	height: "60dp",
 	backgroundColor: '#5B96B2',
 	layout: 'horizontal'
 },
-'#back':{
-	borderWidth: 2,
-	top: 20,
-	borderColor: 'gray',
-	borderRadius: 5,
-	width: 50,
-	height: 30
-}
+"#menuButton":{
+	width: "60dp",
+	height: "60dp"
+},
+
 
 "Label":{
 	color: '#fff',
@@ -35,7 +34,17 @@
 	borderRadius: 10,
 	width: 50,
 	height: 40
+},
+
+'#back':{
+	borderWidth: 2,
+	top:20,
+	borderColor: 'gray',
+	borderRadius:5,
+	width: 50,
+	height: 30
 }
+
 
 'Label[formFactor=tablet]': {
 	font: {
@@ -55,3 +64,4 @@
 	width: 150,
 	height: 70
 }
+

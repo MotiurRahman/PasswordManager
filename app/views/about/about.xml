@@ -1,0 +1,15 @@
+<Alloy>
+	<Window  title="Password Manager" id="aboutWin">
+		<View class="container">
+			<Label id="title" top="100">UTC Associates (Pvt.) Ltd</Label>
+			<Label id="email" top="120">MD. Motiur Rahman</Label>
+
+		</View>
+		<View backgroundColor="gray" width="Ti.UI.Fill" height="140" bottom="0" layout="vertical">
+			<View id="addView" backgroundColor="red" width="Ti.UI.FILL" height="60"></View>
+			<View>
+				<Button  title="close" onClick="close"></Button>
+			</View>
+		</View>>
+	</Window>>
+</Alloy>
