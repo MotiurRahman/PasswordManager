@@ -11,3 +11,4 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 
 
+//com.bd.PasswordManager

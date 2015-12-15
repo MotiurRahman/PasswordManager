@@ -17,6 +17,8 @@ function close() {
 function update() {
 	$.detailWin.close();
 	$.detailWin = null;
+	Alloy.createController('update',args).getView().open();
+
 }
 
 function deleteBtn() {

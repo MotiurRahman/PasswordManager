@@ -4,5 +4,17 @@ function done(e) {
 	});
 }
 
+var push = require("push");
 
-$.index.open(); 
+Ti.App.Properties.setInt('Int', 0);
+
+if (Ti.App.Properties.getInt('Int') == 0) {
+
+	push.pushSubscribe(function(callback) {
+		if (callback == "Subscribed") {
+			Ti.App.Properties.setInt('Int', 1);
+		}
+	});
+}
+
+$.index.open();

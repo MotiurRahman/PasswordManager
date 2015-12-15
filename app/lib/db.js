@@ -4,7 +4,7 @@ db.close();
 
 exports.add = function(title, email, pass, account, pin, url, _callBacl) {
 	var db = Ti.Database.open('people');
-	db.execute('INSERT INTO general (title,email,pass,account,pin,url) VALUES(?,?,?,?,?,?)', title, email, pass,account, pin, url);
+	db.execute('INSERT INTO general (title,email,pass,account,pin,url) VALUES(?,?,?,?,?,?)', title, email, pass, account, pin, url);
 	_callBacl('success');
 	db.close();
 };
@@ -36,15 +36,16 @@ exports.getinfo = function() {
 	return generalInfo;
 };
 
-exports.updateinfo = function(title, description, customer_id) {
+exports.updateinfo = function(title, email, pass, account, pin, url, id) {
 	var db = Ti.Database.open('people');
-	db.execute('UPDATE general set title=?,description=? where customer_id=?', title, description, customer_id);
+	db.execute('UPDATE general set title=?,email=?,pass=?,account=?,pin=?,url=? where id=?', title, email, pass, account, pin, url, id);
+	//alert(title);
 	db.close();
 };
 
 exports.deletinfo = function(id) {
 	var db = Ti.Database.open('people');
 	db.execute('DELETE FROM general where id=?', id);
-	
+
 	db.close();
 };
