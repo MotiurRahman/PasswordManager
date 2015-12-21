@@ -1,0 +1,18 @@
+<Alloy>
+	<Window id="loginWin">
+		<View id="mainView">
+			<View id="mainTopBar">
+				<Button id="back" title="Back" left="0"  color="#fff" onClick="back"></Button>
+				<Label color="green" left="130">Password Manager</Label>>
+			</View>
+			<Label  top="10" >New Password</Label>
+			<TextField id= 'txt_newPass' top="10" passwordMask="true"></TextField>
+			<Label top="10" >Re Password</Label>
+			<TextField id= 're_pass' top="10" passwordMask="true"></TextField>
+			<Label top="10">Email</Label>
+			<TextField id= 'txt_email' top="10" ></TextField>
+			<Button id="save" title="Save" top="20"  color="#fff" onClick="save"></Button>>
+
+		</View>
+	</Window>>
+</Alloy>

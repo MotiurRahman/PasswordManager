@@ -17,16 +17,27 @@ function close() {
 function update() {
 	$.detailWin.close();
 	$.detailWin = null;
-	Alloy.createController('update',args).getView().open();
+	Alloy.createController('update', args).getView().open();
 
 }
 
 function deleteBtn() {
 	var db = require('db');
+	var dialog = Ti.UI.createAlertDialog({
+		buttonNames : ['Confirm', 'Cancel'],
+		message : 'Would you like to delete the file?',
+		title : 'Delete'
+	});
+	dialog.addEventListener('click', function(e) {
+		if (e.index === 0) {
+			db.deletinfo(args.id);
+			Ti.App.fireEvent('refresh');
+			$.detailWin.close();
+			$.detailWin = null;
+		}
 
-	db.deletinfo(args.id);
-	Ti.App.fireEvent('refresh');
-	$.detailWin.close();
-	$.detailWin = null;
+	});
+	dialog.show();
+
 }
 

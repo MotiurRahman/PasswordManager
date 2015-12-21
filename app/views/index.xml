@@ -1,9 +1,10 @@
 <Alloy>
-	<Window class="container">
+	<Window class="container" title="Password Manager">
 		<View layout="vertical" backgroundColor="#000">
 			<ImageView id="first" image="/images/key.png" width="200" height="200" top="30"></ImageView>>
-			<TextField id='pin'  passwordMask="true" onReturn="done"></TextField>
-			<Label id="signin" top="20" >Create Account</Label>
+			<TextField id='pin' top="20" passwordMask="true" backgroundColor="#fff" onReturn="done"></TextField>
+			<Label id="forgot" top="5" font="10" right="20" color="green" onClick="forgot">Forgot Password!</Label>
+			<Label id="signin" top="20" onClick="onCreate">Create Account</Label>
 		</View>>
 	</Window>
 </Alloy>

@@ -1,0 +1,67 @@
+"#mainView":{
+	layout: 'vertical',
+	backgroundColor: '#000'
+},
+"#mainTopBar":{
+	width: Ti.UI.FILL,
+	height: "60dp",
+	backgroundColor: '#5B96B2',
+	//layout: 'horizontal'
+},
+"#menuButton":{
+	width: "60dp",
+	height: "60dp"
+},
+
+
+"Label":{
+	color: '#fff',
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	font: 20,
+	left: 20
+},
+"TextField":{
+	color: '#000',
+	left: 10,
+	right: 10,
+	height: 40,
+	backgroundColor: '#fff'
+}
+'#send':{
+	borderWidth: 2,
+	borderColor: 'green',
+	borderRadius: 10,
+	width: 50,
+	height: 40
+},
+
+'#back':{
+	borderWidth: 2,
+	top:20,
+	borderColor: 'gray',
+	borderRadius:5,
+	width: 50,
+	height: 30
+}
+
+
+'Label[formFactor=tablet]': {
+	font: {
+		fontWeight: 'bold',
+		fontSize: '32dp'
+	},
+	color: '#fff'
+},
+'TextField[formFactor=tablet]': {
+	height: 80
+},
+
+'#send[formFactor=tablet]': {
+	borderWidth: 2,
+	borderColor: 'red',
+	borderRadius: 10,
+	width: 150,
+	height: 70
+}
+
