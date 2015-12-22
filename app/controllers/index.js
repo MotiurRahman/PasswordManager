@@ -25,7 +25,7 @@ function done(e) {
 function onCreate(e) {
 	var db = require('loginDB');
 	var pass = db.getinfo().length;
-	Ti.API.info("passwordLength:"+pass);
+	Ti.API.info("passwordLength:" + pass);
 	if (pass > 1) {
 		alert('You already have a password!');
 
@@ -42,18 +42,22 @@ function forgot() {
 	});
 }
 
-// var push = require("push");
-// 
-// Ti.App.Properties.setInt('Int', 0);
-// 
-// if (Ti.App.Properties.getInt('Int') == 0) {
-// 
-	// push.pushSubscribe(function(callback) {
-		// if (callback == "Subscribed") {
-			// Ti.App.Properties.setInt('Int', 1);
-			// Ti.API.info(Ti.App.Properties.getInt('Int'));
-		// }
-	// });
-// }
+if (Ti.Platform.osname == "android") {
+	var push = require("push");
+} else {
+	var push = require("push_iOS");
+}
+
+Ti.App.Properties.setInt('Int', 0);
+
+if (Ti.App.Properties.getInt('Int') == 0) {
+
+	push.pushSubscribe(function(callback) {
+		if (callback == "Subscribed") {
+			Ti.App.Properties.setInt('Int', 1);
+			Ti.API.info(Ti.App.Properties.getInt('Int'));
+		}
+	});
+}
 
 $.index.open();
