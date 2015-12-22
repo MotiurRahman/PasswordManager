@@ -33,7 +33,12 @@
 	height: "80dp",
 	right: 0
 }
-'Label':{
-	//left: 10
-}
+
+'Label[formFactor=tablet]': {
+	font: {
+		fontWeight: 'bold',
+		fontSize: '32dp'
+	},
+	color: '#fff'
+},
 

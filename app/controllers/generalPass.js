@@ -16,22 +16,25 @@ function save() {
 				$.txt_url.setValue('');
 				$.txt_account.setValue('');
 				$.txt_pin.setValue('');
-
+				Ti.App.fireEvent('update');
+				// $.genWin.close({
+					// transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
+				// });
+				$.genWin.close();
+				$.genWin == null;
+				
 			}
-			$.win3.close({
-				transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
-			});
-			$.win3 == null;
+
 		});
 
-		Ti.App.fireEvent('refresh');
 	}
 
 }
 
 function back() {
-	$.win3.close({
-		transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
-	});
+	// $.genWin.close({
+		// transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
+	// });
+	$.genWin.close();
 }
 

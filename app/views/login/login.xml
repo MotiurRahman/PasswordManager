@@ -10,7 +10,7 @@
 			<Label top="10" >Re Password</Label>
 			<TextField id= 're_pass' top="10" passwordMask="true"></TextField>
 			<Label top="10">Email</Label>
-			<TextField id= 'txt_email' top="10" ></TextField>
+			<TextField id= 'txt_email' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>
 			<Button id="save" title="Save" top="20"  color="#fff" onClick="save"></Button>>
 
 		</View>

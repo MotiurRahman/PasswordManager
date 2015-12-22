@@ -2,12 +2,12 @@
 	<Window id="settingWin">
 		<View id="mainView">
 			<View id="mainTopBar">
-				<Button id="back" title="Back" left="0"  color="#fff" onClick="back"></Button>
-				<Label color="green" left="130">Password Manager</Label>>
+				<Button id="back" title="Back" left="5"  color="#fff" onClick="back"></Button>
+				<Label color="green" size="25">Password Manager</Label>>
 			</View>
-			<Label  top="10" >Your Email Address</Label>
-			<TextField id= 'txt_email' top="10"></TextField>
-			<Button id="send" title="Send" top="20"  color="#fff" onClick="send"></Button>>
+			<Label  top="10" left="20">Your Email Address</Label>
+			<TextField id= 'txt_email' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>
+			<Button id="send" title="Submit" top="20"  color="#fff" onClick="send"></Button>>
 
 		</View>
 	</Window>>

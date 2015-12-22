@@ -7,7 +7,19 @@
 	color: '#fff',
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
-	font: 20,
+	font: {
+		fontSize: 25
+	},
+	left: 20
+},
+
+"Label[formFactor=tablet]":{
+	color: '#fff',
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	font: {
+		fontSize: 30
+	},
 	left: 20
 },
 
@@ -16,6 +28,7 @@
 	borderColor: 'red',
 	borderRadius: 10,
 	width: 150,
+	color: '#fff',
 	height: 70
 }
 
@@ -23,6 +36,7 @@
 	borderWidth: 2,
 	borderColor: 'red',
 	borderRadius: 10,
+	color: '#fff',
 	width: 80,
 	height: 50
 }

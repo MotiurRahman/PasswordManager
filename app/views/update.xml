@@ -1,22 +1,23 @@
 <Alloy>
-	<Window id="win" backgroundColor="gray" title="Password Manager" layout="vertical">
+	<Window id="updateWin" layout="vertical">
 		<View id="mainTopBar">
-			<Button id="back" title="Back" left="0"  color="#fff" onClick="back"></Button>>
+			<Button id="back" title="Back" left="5"  color="#fff" onClick="back"></Button>
+			<Label color="green" size="25">Password Manager</Label>>
 		</View>
 		<ScrollView>
 			<View class="container" backgroundColor="#000" layout="vertical">
 
-				<Label id="title_name" top="10" >Title Name</Label>
+				<Label id="title_name" top="10" left="20" >Title Name</Label>
 				<TextField id= 'txt_title' top="10"></TextField>
-				<Label id="Email" top="10" >Email</Label>
+				<Label id="Email" top="10" left="20">Email</Label>
 				<TextField id= 'txt_email' top="10"></TextField>
-				<Label id="pass" top="10">Password</Label>
+				<Label id="pass" top="10" left="20">Password</Label>
 				<TextField id= 'txt_pass' top="10" ></TextField>
-				<Label id="acount" top="10">Acount Number</Label>
+				<Label id="acount" top="10" left="20">Acount Number</Label>
 				<TextField id= 'txt_account' top="10" ></TextField>
-				<Label id="pin" top="10">Pin Number</Label>
+				<Label id="pin" top="10" left="20">Pin Number</Label>
 				<TextField id= 'txt_pin' top="10" ></TextField>
-				<Label id="url" top="10">Site URL</Label>
+				<Label id="url" top="10" left="20">Site URL</Label>
 				<TextField id= 'txt_url' top="10"></TextField>
 				<Button id="update" title="Update" top="20"  color="#fff" onClick="update"></Button>>
 

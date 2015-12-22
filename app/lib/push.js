@@ -87,7 +87,7 @@ exports.pushSubscribe = function(_callback) {
 		}, function(e) {
 			if (e.success) {
 				alert('Subscribed');
-				callback("Subscribed");
+				_callback("Subscribed");
 			} else {
 				alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 			}

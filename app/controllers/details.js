@@ -31,7 +31,7 @@ function deleteBtn() {
 	dialog.addEventListener('click', function(e) {
 		if (e.index === 0) {
 			db.deletinfo(args.id);
-			Ti.App.fireEvent('refresh');
+			Ti.App.fireEvent('update');
 			$.detailWin.close();
 			$.detailWin = null;
 		}

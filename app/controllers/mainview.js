@@ -18,9 +18,15 @@ function refresh() {
 				pin : data[i].pin,
 				url : data[i].url,
 				searchableText : data[i].title,
+				font : {
+					fontSize : 25
+
+				},
+				color : (Ti.Platform.osname=='andeoid')?"#fff":"#000"
 
 			}
 		});
+
 	}
 
 	$.elementsList.sections[0].setItems(items);
@@ -28,7 +34,7 @@ function refresh() {
 
 refresh();
 
-Ti.App.addEventListener('refresh', refresh);
+Ti.App.addEventListener('update', refresh);
 
 $.elementsList.addEventListener('itemclick', function(e) {
 	var section = $.elementsList.sections[e.sectionIndex];
