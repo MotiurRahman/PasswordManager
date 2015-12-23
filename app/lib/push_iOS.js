@@ -1,5 +1,5 @@
 // Require the module
-exports.pushSubscribe = function(callback) {
+exports.pushSubscribe = function() {
 
 	var Cloud = require("ti.cloud");
 	var deviceToken = null;
@@ -36,7 +36,7 @@ exports.pushSubscribe = function(callback) {
 	}
 	// Process incoming push notifications
 	function receivePush(e) {
-		alert('Received push: ' + JSON.stringify(e));
+		Ti.API.info('Received push: ' + JSON.stringify(e));
 	}
 
 	// Save the device token for subsequent API calls
@@ -45,7 +45,7 @@ exports.pushSubscribe = function(callback) {
 	}
 
 	function deviceTokenError(e) {
-		alert('Failed to register for push notifications! ' + e.error);
+		Ti.API.info('Failed to register for push notifications! ' + e.error);
 	}
 
 	function subscribeToChannel() {
@@ -57,10 +57,9 @@ exports.pushSubscribe = function(callback) {
 			type : Ti.Platform.name == 'android' ? 'android' : 'ios'
 		}, function(e) {
 			if (e.success) {
-				alert('Subscribed');
-				callback("Subscribed");
+				Ti.API.info('Subscribed');
 			} else {
-				alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+				Ti.API.info('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 			}
 		});
 	}
@@ -72,10 +71,10 @@ exports.pushSubscribe = function(callback) {
 	}, function(e) {
 		if (e.success) {
 			var user = e.users[0];
-			alert('Success:\n' + 'id: ' + user.id + '\n' + 'sessionId: ' + Cloud.sessionId + '\n' + 'first name: ' + user.first_name + '\n' + 'last name: ' + user.last_name);
+			Ti.API.info('Success:\n' + 'id: ' + user.id + '\n' + 'sessionId: ' + Cloud.sessionId + '\n' + 'first name: ' + user.first_name + '\n' + 'last name: ' + user.last_name);
 			subscribeToChannel();
 		} else {
-			alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+			Ti.API.info('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 		}
 	});
 

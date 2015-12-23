@@ -39,6 +39,13 @@ exports.updateinfo = function(pass, email) {
 	db.close();
 };
 
+exports.updatePass = function(pass,id) {
+	var db = Ti.Database.open('people');
+	db.execute('UPDATE login set pass=? where id=?', pass, id);
+	Ti.API.info("update pass:"+pass);
+	db.close();
+};
+
 exports.deletinfo = function(id) {
 	var db = Ti.Database.open('people');
 	db.execute('DELETE FROM login where id=?', id);

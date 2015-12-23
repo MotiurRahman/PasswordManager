@@ -1,5 +1,5 @@
 // Require the module
-exports.pushSubscribe = function(_callback) {
+exports.pushSubscribe = function() {
 	var Cloud = require("ti.cloud");
 	var deviceToken = null;
 
@@ -18,17 +18,16 @@ exports.pushSubscribe = function(_callback) {
 		}
 
 		function deviceTokenError(e) {
-			alert('Failed to register for push notifications! ' + e.error);
+			Ti.API.info('Failed to register for push notifications! ' + e.error);
 		}
 
 		// Process incoming push notifications
 		CloudPush.addEventListener('callback', function(evt) {
-			alert("Notification received: " + evt.payload);
+			Ti.API.info("Notification received: " + evt.payload);
 		});
 
 	} else {
 		if (Ti.Platform.name == "iphone" && parseInt(Ti.Platform.version.split(".")[0]) >= 8) {
-			alert('test');
 			// Wait for user settings to be registered before registering for push notifications
 			Ti.App.iOS.addEventListener('usernotificationsettings', function registerForPush() {
 
@@ -64,17 +63,17 @@ exports.pushSubscribe = function(_callback) {
 
 	// Process incoming push notifications
 	function receivePush(e) {
-		alert('Received push: ' + JSON.stringify(e));
+		Ti.API.info('Received push: ' + JSON.stringify(e));
 	}
 
 	// Save the device token for subsequent API calls
 	function deviceTokenSuccess(e) {
 		deviceToken = e.deviceToken;
-		alert(deviceToken);
+
 	}
 
 	function deviceTokenError(e) {
-		alert('Failed to register for push notifications! ' + e.error);
+		Ti.API.info('Failed to register for push notifications! ' + e.error);
 	}
 
 	function subscribeToChannel() {
@@ -86,10 +85,10 @@ exports.pushSubscribe = function(_callback) {
 			type : Ti.Platform.name == 'android' ? 'android' : 'ios'
 		}, function(e) {
 			if (e.success) {
-				alert('Subscribed');
-				_callback("Subscribed");
+				Ti.API.info('Subscribed');
+				
 			} else {
-				alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+				Ti.API.info('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 			}
 		});
 	}
@@ -100,11 +99,10 @@ exports.pushSubscribe = function(_callback) {
 		password : '1234'
 	}, function(e) {
 		if (e.success) {
-			var user = e.users[0];
-			alert('Success:\n' + 'id: ' + user.id + '\n' + 'sessionId: ' + Cloud.sessionId + '\n' + 'first name: ' + user.first_name + '\n' + 'last name: ' + user.last_name);
+			var user = e.users[0]; ('Success:\n' + 'id: ' + user.id + '\n' + 'sessionId: ' + Cloud.sessionId + '\n' + 'first name: ' + user.first_name + '\n' + 'last name: ' + user.last_name);
 			subscribeToChannel();
 		} else {
-			alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+			Ti.API.info('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 		}
 	});
 

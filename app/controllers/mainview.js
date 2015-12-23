@@ -22,7 +22,7 @@ function refresh() {
 					fontSize : 25
 
 				},
-				color : (Ti.Platform.osname=='andeoid')?"#fff":"#000"
+				color : (Ti.Platform.osname == 'andeoid') ? "#fff" : "#000"
 
 			}
 		});
@@ -35,6 +35,17 @@ function refresh() {
 refresh();
 
 Ti.App.addEventListener('update', refresh);
+
+var ad = require('admob');
+
+var addview;
+if (Ti.Platform.osname == 'android') {
+	addview = ad.addMob_android();
+} else {
+	addview = ad.addMob_iOS();
+}
+
+$.adView.add(addview);
 
 $.elementsList.addEventListener('itemclick', function(e) {
 	var section = $.elementsList.sections[e.sectionIndex];

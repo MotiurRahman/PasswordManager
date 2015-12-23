@@ -1,5 +1,5 @@
 "#mainView":{
-	layout: 'vertical',
+	//layout: 'vertical',
 	backgroundColor: '#cacaca'
 },
 "#mainTopBar":{
@@ -42,3 +42,17 @@
 	color: '#fff'
 },
 
+'listView':{
+	top: '61dp'
+}
+'listView[formFactor=tablet]':{
+	top: '81dp'
+}
+
+'#name':{
+	font:{
+		fontSize: 30,
+		fontFamily: 'Arizonia-Regular'
+	},
+	color:'#fff'
+}

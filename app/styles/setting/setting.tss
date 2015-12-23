@@ -32,12 +32,13 @@
 	height: 40,
 	backgroundColor: '#fff'
 }
-'#send':{
+'#submit':{
 	borderWidth: 2,
 	borderColor: 'green',
 	borderRadius: 10,
 	width: 80,
-	height: 50
+	height: 50,
+	color:'#fff'
 },
 
 '#back':{
@@ -68,7 +69,7 @@
 	height: 80
 },
 
-'#send[formFactor=tablet]': {
+'#submit[formFactor=tablet]': {
 	borderWidth: 2,
 	borderColor: 'red',
 	borderRadius: 10,

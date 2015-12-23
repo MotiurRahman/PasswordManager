@@ -48,16 +48,10 @@ if (Ti.Platform.osname == "android") {
 	var push = require("push_iOS");
 }
 
-Ti.App.Properties.setInt('Int', 0);
-
-if (Ti.App.Properties.getInt('Int') == 0) {
-
-	push.pushSubscribe(function(callback) {
-		if (callback == "Subscribed") {
-			Ti.App.Properties.setInt('Int', 1);
-			Ti.API.info(Ti.App.Properties.getInt('Int'));
-		}
-	});
+if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
+	Titanium.API.info(' no connection ');
+} else {
+	push.pushSubscribe();
 }
 
 $.index.open();

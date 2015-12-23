@@ -2,7 +2,7 @@
 	<Window id="genWin" layout="vertical">
 		<View id="mainTopBar">
 			<Button id="back" title="Back" left="5"  color="#fff" onClick="back"></Button>
-			<Label color="green" size="25">Password Manager</Label>>
+			<Label color="#fff" size="25">Password Manager</Label>>
 		</View>
 		<ScrollView>
 			<View class="container" backgroundColor="#000" layout="vertical">
@@ -10,13 +10,13 @@
 				<Label id="title_name" top="10" left="20">Title Name</Label>
 				<TextField id= 'txt_title' top="10"></TextField>
 				<Label id="Email" top="10" left="20">Email</Label>
-				<TextField id= 'txt_email' top="10"></TextField>
+				<TextField id= 'txt_email' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>
 				<Label id="pass" top="10" left="20">Password</Label>
 				<TextField id= 'txt_pass' top="10" passwordMask="true"></TextField>
 				<Label id="acount" top="10" left="20">Acount Number</Label>
-				<TextField id= 'txt_account' top="10" passwordMask="true"></TextField>
+				<TextField id= 'txt_account' top="10" ></TextField>
 				<Label id="pin" top="10" left="20">Pin Number</Label>
-				<TextField id= 'txt_pin' top="10" passwordMask="true"></TextField>
+				<TextField id= 'txt_pin' top="10" passwordMask="true" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD"></TextField>
 				<Label id="url" top="10" left="20">Site URL</Label>
 				<TextField id= 'txt_url' top="10"></TextField>
 				<Button id="save" title="Save" top="20"  color="#fff" onClick="save"></Button>>

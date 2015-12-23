@@ -2,7 +2,7 @@
 	<Window id="updateWin" layout="vertical">
 		<View id="mainTopBar">
 			<Button id="back" title="Back" left="5"  color="#fff" onClick="back"></Button>
-			<Label color="green" size="25">Password Manager</Label>>
+			<Label color="#fff" size="25">Password Manager</Label>>
 		</View>
 		<ScrollView>
 			<View class="container" backgroundColor="#000" layout="vertical">

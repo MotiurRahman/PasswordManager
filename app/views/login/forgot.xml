@@ -10,5 +10,9 @@
 			<Button id="send" title="Submit" top="20"  color="#fff" onClick="send"></Button>>
 
 		</View>
+		<View backgroundColor="gray" width="Ti.UI.Fill" height="60" bottom="0">
+			<View id="adView" backgroundColor="red" width="Ti.UI.FILL" height="60">
+			</View>
+		</View>
 	</Window>>
 </Alloy>
