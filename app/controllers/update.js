@@ -1,6 +1,17 @@
 var args = arguments[0] || {};
 //alert(args.title);
 
+var ad = require('admob');
+
+var addview;
+if (Ti.Platform.osname == 'android') {
+	addview = ad.addMob_android();
+} else {
+	addview = ad.addMob_iOS();
+}
+
+$.adView.add(addview);
+
 $.txt_title.setValue(args.title);
 $.txt_email.setValue(args.email);
 $.txt_pass.setValue(args.pass);

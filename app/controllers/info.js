@@ -92,20 +92,6 @@ menuView.menuTable.addEventListener('click', function(e) {
 	Ti.API.info(e.rowData.id);
 });
 
-$.options.addEventListener('click', function(e) {
-	if (e.index == 0) {
-		//alert('general');
-		Alloy.createController('generalPass').getView().open({
-			transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
-		});
 
-	} else if (e.index == 1) {
-		Alloy.createController('bankAC').getView().open({
-			transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
-		});
-	} else {
-	}
-
-});
 
 //$.index.open();

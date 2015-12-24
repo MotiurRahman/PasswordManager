@@ -8,8 +8,7 @@
 	height: Ti.UI.SIZE,
 	font: {
 		fontSize: '20dp'
-	},
-	
+	}
 },
 "TextField":{
 	color: '#000',
@@ -19,13 +18,15 @@
 	backgroundColor: '#fff'
 }
 
-'Label[formFactor=tablet]': {
-	font: {
-		fontWeight: 'bold',
-		fontSize: '32dp'
-	},
-	color: '#fff'
-},
+
 'TextField[formFactor=tablet]': {
 	height: 80
+}
+
+'#name[formFactor=tablet]':{
+	font:{
+		fontSize: '35dp',
+		fontFamily: 'MotionPicturePersonalUse'
+	},
+	color: '#fff'
 }

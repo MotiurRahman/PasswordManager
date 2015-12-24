@@ -13,14 +13,14 @@
 				<TextField id= 'txt_email' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>
 				<Label id="pass" top="10" left="20">Password</Label>
 				<TextField id= 'txt_pass' top="10" passwordMask="true"></TextField>
-				<Label id="acount" top="10" left="20">Acount Number</Label>
+				<Label id="acount" top="10" left="20">Account Number</Label>
 				<TextField id= 'txt_account' top="10" ></TextField>
 				<Label id="pin" top="10" left="20">Pin Number</Label>
 				<TextField id= 'txt_pin' top="10" passwordMask="true" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD"></TextField>
 				<Label id="url" top="10" left="20">Site URL</Label>
 				<TextField id= 'txt_url' top="10"></TextField>
 				<Button id="save" title="Save" top="20"  color="#fff" onClick="save"></Button>>
-
+				<View id="adView" width="Ti.UI.FILL" height="60"></View>
 			</View>
 		</ScrollView>
 	</Window>

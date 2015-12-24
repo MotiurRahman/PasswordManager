@@ -5,15 +5,13 @@
 "#mainTopBar":{
 	width: Ti.UI.FILL,
 	height: "60dp",
-	backgroundColor: '#5B96B2',
-	//layout: 'horizontal'
+	backgroundColor: '#5B96B2'
 },
 
 "#mainTopBar[formFactor=tablet]":{
 	width: Ti.UI.FILL,
 	height: "100",
-	backgroundColor: '#5B96B2',
-	//layout: 'horizontal'
+	backgroundColor: '#5B96B2'
 },
 
 
@@ -22,8 +20,9 @@
 	color: '#fff',
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
-	font: 20,
-	left: 20
+	font: {
+		fontSize: '20dp'
+	}
 },
 "TextField":{
 	color: '#000',
@@ -32,19 +31,19 @@
 	height: 40,
 	backgroundColor: '#fff'
 }
-'#save':{
+'#submit':{
 	borderWidth: 2,
 	borderColor: 'green',
 	borderRadius: 10,
-	width: 50,
-	height: 40
+	width: 70,
+	height: 50
 },
 
 '#back':{
 	borderWidth: 2,
-	top:20,
+	top: 20,
 	borderColor: 'gray',
-	borderRadius:5,
+	borderRadius: 5,
 	width: 50,
 	height: 30
 }
@@ -52,7 +51,7 @@
 '#back[formFactor=tablet]':{
 	borderWidth: 2,
 	borderColor: 'gray',
-	borderRadius:5,
+	borderRadius: 5,
 	width: 100,
 	height: 60
 }
@@ -70,7 +69,7 @@
 	height: 80
 },
 
-'#save[formFactor=tablet]': {
+'#submit[formFactor=tablet]': {
 	borderWidth: 2,
 	borderColor: 'red',
 	borderRadius: 10,

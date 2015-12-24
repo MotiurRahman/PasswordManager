@@ -34,25 +34,35 @@
 	right: 0
 }
 
-'Label[formFactor=tablet]': {
-	font: {
-		fontWeight: 'bold',
-		fontSize: '32dp'
-	},
-	color: '#fff'
+'#listView[formFactor=tablet]':{
+	top: 81
 },
 
-'listView':{
+"#listView":{
+	top: 61
+}
+
+
+'#listView':{
 	top: '61dp'
 }
-'listView[formFactor=tablet]':{
+'#listView[formFactor=tablet]':{
 	top: '81dp'
 }
 
 '#name':{
 	font:{
-		fontSize: 30,
+		fontSize: '25dp',
 		fontFamily: 'Arizonia-Regular'
 	},
-	color:'#fff'
+	color: '#fff'
 }
+
+'#name[formFactor=tablet]':{
+	font:{
+		fontSize: '35dp',
+		fontFamily: 'Arizonia-Regular'
+	},
+	color: '#fff'
+}
+

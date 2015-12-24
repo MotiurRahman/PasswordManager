@@ -1,12 +1,5 @@
 <Alloy>
 	<Window class="container" id="win">
 		<Require type="widget" src="com.alcoapps.drawermenu" id="drawermenu"/>
-		<OptionDialog id="options" title="App Options" destructive="3" cancel="2">
-			<Options >
-				<Option >General</Option>
-				<Option>Bank A/C</Option>
-				<Option>cancel</Option>
-			</Options>
-		</OptionDialog>
 	</Window>
 </Alloy>

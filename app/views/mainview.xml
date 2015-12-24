@@ -7,7 +7,7 @@
 			</Label>>
 			<View id="menuButtonRight"/>
 		</View>
-		<View id="listView" top="61" zIndex="1">
+		<View id="listView" zIndex="1">
 			<ListView id="elementsList" >
 				<SearchBar barColor="#000" />
 				<ListSection name="elements" />

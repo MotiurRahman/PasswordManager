@@ -5,7 +5,7 @@
         </View>
         <TableView>
             <TableViewRow id="row">
-                <View id="view" backgroundColor="red" width="20" height="20"/>
+                <View id="view" width="20" height="20"/>
             </TableViewRow>
         </TableView>
     </View>
