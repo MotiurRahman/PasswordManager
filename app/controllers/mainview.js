@@ -22,7 +22,7 @@ function refresh() {
 					fontSize : 25
 
 				},
-				color : (Ti.Platform.osname == 'andeoid') ? "#fff" : "#000"
+				color : (Ti.Platform.osname === "andeoid") ? "#fff" : "#000"
 
 			}
 		});

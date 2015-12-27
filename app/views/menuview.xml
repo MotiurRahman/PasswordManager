@@ -4,12 +4,14 @@
 		<TableView class="menuTable" id="menuTable">
 			<TableViewRow class="tableRow" id="row1">
 				<View id="rowContainer">
-					<View id="rowSkull" class="rowIcon"/><Label id="rowLabel" class="rowLabel">About</Label>
+					<View id="rowSkull" class="rowIcon"/>
+					<Label id="rowLabel" class="rowLabel">About</Label>
 				</View>
 			</TableViewRow>
 			<TableViewRow class="tableRow" id="row2">
 				<View id="rowContainer">
-					<View id="rowGear" class="rowIcon"/><Label id="rowLabel" class="rowLabel">Setting</Label>
+					<View id="rowGear" class="rowIcon"/>
+					<Label id="rowLabel" class="rowLabel">Setting</Label>
 				</View>
 			</TableViewRow>
 		</TableView>

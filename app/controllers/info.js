@@ -26,10 +26,13 @@ mainView.menuButtonRight.addEventListener('click', function() {
 	// Alloy.createController('option').getView().open();
 	//$.options.show();
 	//alert(data);
-
-	Alloy.createController('generalPass').getView().open({
-		transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
-	});
+	if (Ti.Platform.osname === "android") {
+		Alloy.createController('generalPass').getView().open();
+	} else {
+		Alloy.createController('generalPass').getView().open({
+			transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+		});
+	}
 
 });
 // method is exposed by widget
@@ -91,7 +94,5 @@ menuView.menuTable.addEventListener('click', function(e) {
 	// on Android the event is received by the label, so watch out!
 	Ti.API.info(e.rowData.id);
 });
-
-
 
 //$.index.open();

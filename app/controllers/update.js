@@ -20,9 +20,15 @@ $.txt_account.setValue(args.account);
 $.txt_pin.setValue(args.pin);
 
 function back() {
-	$.updateWin.close({
-		transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
-	});
+
+	if (Ti.Platform.osname === "android") {
+		$.updateWin.close();
+	} else {
+		$.updateWin.close({
+			transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
+		});
+	}
+
 }
 
 function update() {

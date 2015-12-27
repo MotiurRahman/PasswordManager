@@ -3,16 +3,15 @@
 		<View id="mainView">
 			<View id="mainTopBar">
 				<Button id="back" title="Back" left="5"  color="#fff" onClick="back"></Button>
-				<Label color="green" size="25">Password Manager</Label>>
+				<Label color="green" size="25">Password Manager</Label>
 			</View>
 			<Label  top="10" left="20">Your Email Address</Label>
 			<TextField id= 'txt_email' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>
 			<Button id="send" title="Submit" top="20"  color="#fff" onClick="send"></Button>>
 
 		</View>
-		<View backgroundColor="gray" width="Ti.UI.Fill" height="60" bottom="0">
-			<View id="adView" backgroundColor="red" width="Ti.UI.FILL" height="60">
-			</View>
+		<View  width="Ti.UI.Fill" height="60" bottom="0">
+			<View id="adView" width="Ti.UI.FILL" height="60"></View>
 		</View>
-	</Window>>
+	</Window>
 </Alloy>
