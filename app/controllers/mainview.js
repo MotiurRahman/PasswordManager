@@ -39,7 +39,7 @@ Ti.App.addEventListener('update', refresh);
 var ad = require('admob');
 
 var addview;
-if (Ti.Platform.osname == 'android') {
+if (OS_ANDROID) {
 	addview = ad.addMob_android();
 } else {
 	addview = ad.addMob_iOS();

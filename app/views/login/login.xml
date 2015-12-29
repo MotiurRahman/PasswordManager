@@ -1,6 +1,6 @@
 <Alloy>
-	<Window id="loginWin">
-		<View id="mainView">
+	<Window id = "loginWin">
+		<View id = "mainView">
 			<View id="mainTopBar">
 				<Button id="back" title="Back" left=5"  color="#fff" onClick="back"></Button>
 				<Label color="green" > Password Manager </Label>
@@ -13,5 +13,5 @@
 			<TextField id= 'txt_email' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>
 			<Button id="submit" title="Submit" top="20"  color="#fff" onClick="save">Submit</Button>
 		</View>
-	</Window>
+	   </Window>
 </Alloy>

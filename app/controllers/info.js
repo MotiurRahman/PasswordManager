@@ -26,7 +26,7 @@ mainView.menuButtonRight.addEventListener('click', function() {
 	// Alloy.createController('option').getView().open();
 	//$.options.show();
 	//alert(data);
-	if (Ti.Platform.osname === "android") {
+	if (OS_ANDROID) {
 		Alloy.createController('generalPass').getView().open();
 	} else {
 		Alloy.createController('generalPass').getView().open({

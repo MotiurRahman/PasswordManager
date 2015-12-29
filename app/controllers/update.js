@@ -4,7 +4,7 @@ var args = arguments[0] || {};
 var ad = require('admob');
 
 var addview;
-if (Ti.Platform.osname == 'android') {
+if (OS_ANDROID) {
 	addview = ad.addMob_android();
 } else {
 	addview = ad.addMob_iOS();
@@ -21,7 +21,7 @@ $.txt_pin.setValue(args.pin);
 
 function back() {
 
-	if (Ti.Platform.osname === "android") {
+	if (OS_ANDROID) {
 		$.updateWin.close();
 	} else {
 		$.updateWin.close({

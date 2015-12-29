@@ -6,7 +6,7 @@ function done(e) {
 		for (; ; ) {
 			if ($.pin.getValue() == pass[i].pass) {
 
-				if (Ti.Platform.osname === "android") {
+				if (OS_ANDROID) {
 					Alloy.createController('info').getView().open();
 				} else {
 					Alloy.createController('info').getView().open({
@@ -40,8 +40,9 @@ function onCreate(e) {
 }
 
 function forgot() {
-	if (Ti.Platform.osname === "android") {
-		Alloy.createController('login/forgot').getView().open();
+	if (OS_ANDROID) {
+		alert('forgot');
+		var forgot = Alloy.createController("login/forgot").getView().open({modal:true});
 
 	} else {
 		Alloy.createController('login/forgot').getView().open({
@@ -51,7 +52,7 @@ function forgot() {
 
 }
 
-if (Ti.Platform.osname == "android") {
+if (OS_ANDROID) {
 	var push = require("push");
 } else {
 	var push = require("push_iOS");
