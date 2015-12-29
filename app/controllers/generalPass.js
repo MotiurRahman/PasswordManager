@@ -27,7 +27,8 @@ function save() {
 				$.txt_url.setValue('');
 				$.txt_account.setValue('');
 				$.txt_pin.setValue('');
-				Ti.App.fireEvent('update');
+				//Ti.App.fireEvent('update');
+				Alloy.Events.trigger('updateMainUI');
 				// $.genWin.close({
 					// transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
 				// });

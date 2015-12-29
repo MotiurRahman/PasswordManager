@@ -12,6 +12,12 @@
 },
 "TextField":{
 	color: '#000',
+	borderRadius: '10',
+	borderWidth: '5',
+	borderColor: 'gray',
+	font: {
+		fontSize: '20'
+	},
 	left: 20,
 	right: 20,
 	height: 40,
@@ -20,18 +26,37 @@
 
 
 'TextField[formFactor=tablet]': {
-	height: 80
+	height: 80,
+	font: {
+		fontSize: '30'
+	}
 }
 
-'#name[formFactor=tablet]':{
+'#name_and[formFactor=tablet]':{
 	font:{
-		fontSize: '35dp',
+		fontSize: '50dp',
+		fontFamily: 'MotionPicture_PersonalUseOnly'
+	},
+	color: '#fff'
+}
+
+"#name_and[formFactor=handheld]":{
+	font:{
+		fontSize: '25dp',
+		fontFamily: 'MotionPicture_PersonalUseOnly'
+	},
+	color: '#fff'
+}
+
+'#name_ios[formFactor=tablet]':{
+	font:{
+		fontSize: '50dp',
 		fontFamily: 'MotionPicturePersonalUse'
 	},
 	color: '#fff'
 }
 
-'#name':{
+"#name_ios[formFactor=handheld]":{
 	font:{
 		fontSize: '25dp',
 		fontFamily: 'MotionPicturePersonalUse'

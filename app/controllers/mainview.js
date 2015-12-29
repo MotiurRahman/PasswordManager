@@ -22,7 +22,7 @@ function refresh() {
 					fontSize : 25
 
 				},
-				color : (Ti.Platform.osname === "andeoid") ? "#fff" : "#000"
+				color : (OS_ANDROID) ? "#fff" : "#000"
 
 			}
 		});
@@ -34,7 +34,8 @@ function refresh() {
 
 refresh();
 
-Ti.App.addEventListener('update', refresh);
+//Ti.App.addEventListener('update', refresh);
+Alloy.Events.on('updateMainUI', refresh);
 
 var ad = require('admob');
 
@@ -65,4 +66,5 @@ $.elementsList.addEventListener('itemclick', function(e) {
 	});
 
 });
+
 

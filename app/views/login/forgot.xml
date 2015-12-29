@@ -2,8 +2,8 @@
 	<Window id="settingWin">
 		<View id="mainView">
 			<View id="mainTopBar">
-				<Button id="back" title="Back" left="5"  color="#fff" onClick="back"></Button>
-				<Label color="green" size="25">Password Manager</Label>
+				<Button id="back" left="5" onClick="back" backgroundImage="/images/Back.png"></Button>
+				<Label color="#fff">Password Manager</Label>
 			</View>
 			<Label  top="10" left="20">Your Email Address</Label>
 			<TextField id= 'txt_email' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>

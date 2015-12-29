@@ -95,4 +95,7 @@ menuView.menuTable.addEventListener('click', function(e) {
 	Ti.API.info(e.rowData.id);
 });
 
-//$.index.open();
+$.win.addEventListener('close', function() {
+	Alloy.Events.off('updateMainUI');
+});
+

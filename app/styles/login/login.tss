@@ -32,18 +32,13 @@
 	backgroundColor: '#fff'
 }
 '#submit':{
-	borderWidth: 2,
-	borderColor: 'green',
-	borderRadius: 10,
+
 	width: 70,
 	height: 50
 },
 
 '#back':{
-	borderWidth: 2,
-	top: 20,
-	borderColor: 'gray',
-	borderRadius: 5,
+
 	width: 50,
 	height: 30
 }
@@ -66,7 +61,10 @@
 	color: '#fff'
 },
 'TextField[formFactor=tablet]': {
-	height: 80
+	height: 80,
+	font: {
+		fontSize: '30'
+	}
 },
 
 '#submit[formFactor=tablet]': {

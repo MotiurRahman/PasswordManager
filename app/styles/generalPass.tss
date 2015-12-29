@@ -13,18 +13,13 @@
 },
 
 '#back':{
-	borderWidth: 2,
-	top: 20,
-	borderColor: 'gray',
-	borderRadius: 5,
+
 	width: 50,
 	height: 30
 }
 
 '#back[formFactor=tablet]':{
-	borderWidth: 2,
-	borderColor: 'gray',
-	borderRadius: 5,
+
 	width: 100,
 	height: 60
 }
@@ -62,7 +57,10 @@
 	color: '#fff'
 },
 'TextField[formFactor=tablet]': {
-	height: 80
+	height: 80,
+	font: {
+		fontSize: '30'
+	}
 },
 
 '#save[formFactor=tablet]': {

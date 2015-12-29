@@ -7,6 +7,7 @@ function done(e) {
 			if ($.pin.getValue() == pass[i].pass) {
 
 				if (OS_ANDROID) {
+
 					Alloy.createController('info').getView().open();
 				} else {
 					Alloy.createController('info').getView().open({
@@ -41,8 +42,9 @@ function onCreate(e) {
 
 function forgot() {
 	if (OS_ANDROID) {
-		alert('forgot');
-		var forgot = Alloy.createController("login/forgot").getView().open({modal:true});
+		var forgot = Alloy.createController("login/forgot").getView().open({
+			modal : true
+		});
 
 	} else {
 		Alloy.createController('login/forgot').getView().open({

@@ -12,3 +12,5 @@
 
 
 //com.bd.PasswordManager
+
+Alloy.Events = _.clone(Backbone.Events);
