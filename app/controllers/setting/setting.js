@@ -29,12 +29,42 @@ function submit() {
 					$.re_pass.setValue("");
 					$.settingWin.close();
 
+					var toast = Ti.UI.createNotification({
+						message : 'Password has been changed successfully',
+						duration : Ti.UI.NOTIFICATION_DURATION_LONG
+					});
+					if (OS_ANDROID) {
+						toast.show();
+					} else {
+						alert('Password has been changed successfully');
+					}
+
 				} else {
-					alert('password does not match');
+
+					var toast = Ti.UI.createNotification({
+						message : 'password does not match',
+						duration : Ti.UI.NOTIFICATION_DURATION_LONG
+					});
+					if (OS_ANDROID) {
+						toast.show();
+					} else {
+						alert('password does not match');
+					}
+
 				}
 				break;
 			} else {
-				alert('Pleaes provide a correct password!');
+
+				var toast = Ti.UI.createNotification({
+					message : 'Pleaes provide a correct password!',
+					duration : Ti.UI.NOTIFICATION_DURATION_LONG
+				});
+				if (OS_ANDROID) {
+					toast.show();
+				} else {
+					alert('Pleaes provide a correct password!');
+				}
+
 				break;
 			}
 			i++;

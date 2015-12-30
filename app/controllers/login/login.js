@@ -8,7 +8,16 @@ function save() {
 		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
 		if (!filter.test(email)) {
-			alert('Please provide a valid email address');
+			var toast = Ti.UI.createNotification({
+				message : 'Please provide a valid email address',
+				duration : Ti.UI.NOTIFICATION_DURATION_LONG
+			});
+			if (OS_ANDROID) {
+				toast.show();
+			} else {
+				alert('Please provide a valid email address');
+			}
+
 			return false;
 		} else {
 			return true;
@@ -16,7 +25,16 @@ function save() {
 	}
 
 	if ($.txt_newPass.getValue() == '' || $.txt_email.getValue() == '' || $.re_pass.getValue() == '') {
-		alert('Pleae fill up minimum requirement');
+
+		var toast = Ti.UI.createNotification({
+			message : 'Pleae fill up minimum requirement',
+			duration : Ti.UI.NOTIFICATION_DURATION_LONG
+		});
+		if (OS_ANDROID) {
+			toast.show();
+		} else {
+			alert('Pleae fill up minimum requirement');
+		}
 
 	} else {
 
@@ -29,6 +47,15 @@ function save() {
 						$.txt_newPass.setValue("");
 						$.re_pass.setValue("");
 						$.txt_email.getValue("");
+						var toast = Ti.UI.createNotification({
+							message : 'Password create Successfully',
+							duration : Ti.UI.NOTIFICATION_DURATION_LONG
+						});
+						if (OS_ANDROID) {
+							toast.show();
+						} else {
+							alert('Password create Successfully');
+						}
 					}
 
 					$.loginWin.close();
@@ -38,7 +65,16 @@ function save() {
 			}
 
 		} else {
-			alert('password does not match');
+			var toast = Ti.UI.createNotification({
+				message : 'password does not match',
+				duration : Ti.UI.NOTIFICATION_DURATION_LONG
+			});
+			if (OS_ANDROID) {
+				toast.show();
+			} else {
+				alert('password does not match');
+			}
+
 		}
 
 	}

@@ -23,7 +23,7 @@
 	height: "20dp"
 },
 "#rowSkull":{
-	backgroundImage: '/21-skull.png'
+	backgroundImage: '/images/about.png'
 },
 "#rowGear":{
 	backgroundImage: '/19-gear.png'

@@ -38,11 +38,11 @@ function deleteBtn() {
 		buttonNames : ['Confirm', 'Cancel'],
 		message : 'Would you like to delete the file?',
 		title : 'Delete'
-	});
+	}); 
 	dialog.addEventListener('click', function(e) {
 		if (e.index === 0) {
 			db.deletinfo(args.id);
-			Ti.App.fireEvent('update');
+			Alloy.Events.trigger('updateMainUI');
 			$.detailWin.close();
 			$.detailWin = null;
 		}

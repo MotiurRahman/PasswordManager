@@ -1,9 +1,9 @@
 <Alloy>
 	<Window class="container" title="Password Manager">
 		<ScrollView>
-			<View layout="vertical" backgroundColor="#000">
+			<View layout="vertical">
 				<Label id="name_and" top="20" platform="android">Password Manager</Label>
-				<Label id="name_ios" top="20" platform="iOS">Password Manager</Label>
+				<Label id="name_ios" top="20" platform="ios">Password Manager</Label>
 				<ImageView id="first" image="/images/open.png" width="200" height="200" top="30"></ImageView>>
 				<TextField id='pin' top="20" passwordMask="true" backgroundColor="#fff" onReturn="done" hintText="Enter Password then press done!"></TextField>
 				<Label id="forgot" top="5" font="10" right="20" color="green" onClick="forgot">Forgot Password!</Label>

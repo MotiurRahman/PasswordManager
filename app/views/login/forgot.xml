@@ -7,7 +7,7 @@
 			</View>
 			<Label  top="10" left="20">Your Email Address</Label>
 			<TextField id= 'txt_email' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>
-			<Button id="send" title="Submit" top="20"  color="#fff" onClick="send"></Button>>
+			<Button id="submit" title="Submit" top="20"  color="#fff" onClick="send"></Button>>
 
 		</View>
 		<View  width="Ti.UI.Fill" height="60" bottom="0">

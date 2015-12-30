@@ -31,7 +31,7 @@
 	height: 40,
 	backgroundColor: '#fff'
 }
-'#send':{
+'#submit':{
 	borderWidth: 2,
 	borderColor: 'green',
 	borderRadius: 10,
@@ -62,9 +62,9 @@
 	}
 },
 
-'#send[formFactor=tablet]': {
+'#submit[formFactor=tablet]': {
 	borderWidth: 2,
-	borderColor: 'red',
+	borderColor: 'green',
 	borderRadius: 10,
 	width: 150,
 	height: 70

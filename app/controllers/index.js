@@ -17,13 +17,33 @@ function done(e) {
 
 				break;
 			} else {
-				alert('Pleaes provide a correct password!');
+
+				if (OS_ANDROID) {
+					var toast = Ti.UI.createNotification({
+						message : 'Pleaes provide a correct password!',
+						duration : Ti.UI.NOTIFICATION_DURATION_LONG
+					});
+					toast.show();
+				} else {
+					alert('Pleaes provide a correct password!');
+				}
+
 				break;
 			}
 			i++;
 		}
 	} else {
-		alert('Please create a password');
+
+		if (OS_ANDROID) {
+			var toast = Ti.UI.createNotification({
+				message : 'Please create a password',
+				duration : Ti.UI.NOTIFICATION_DURATION_LONG
+			});
+			toast.show();
+		} else {
+			alert('Please create a password!');
+		}
+
 	}
 }
 
@@ -32,7 +52,16 @@ function onCreate(e) {
 	var pass = db.getinfo().length;
 	Ti.API.info("passwordLength:" + pass);
 	if (pass > 1) {
-		alert('You already have a password!');
+
+		if (OS_ANDROID) {
+			var toast = Ti.UI.createNotification({
+				message : 'You already have a password!',
+				duration : Ti.UI.NOTIFICATION_DURATION_LONG
+			});
+			toast.show();
+		} else {
+			alert('You already have a password!');
+		}
 	} else {
 		Alloy.createController('login/login').getView().open({
 			modal : true
