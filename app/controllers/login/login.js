@@ -8,11 +8,12 @@ function save() {
 		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
 		if (!filter.test(email)) {
-			var toast = Ti.UI.createNotification({
-				message : 'Please provide a valid email address',
-				duration : Ti.UI.NOTIFICATION_DURATION_LONG
-			});
+
 			if (OS_ANDROID) {
+				var toast = Ti.UI.createNotification({
+					message : 'Please provide a valid email address',
+					duration : Ti.UI.NOTIFICATION_DURATION_LONG
+				});
 				toast.show();
 			} else {
 				alert('Please provide a valid email address');
@@ -26,11 +27,11 @@ function save() {
 
 	if ($.txt_newPass.getValue() == '' || $.txt_email.getValue() == '' || $.re_pass.getValue() == '') {
 
-		var toast = Ti.UI.createNotification({
-			message : 'Pleae fill up minimum requirement',
-			duration : Ti.UI.NOTIFICATION_DURATION_LONG
-		});
 		if (OS_ANDROID) {
+			var toast = Ti.UI.createNotification({
+				message : 'Pleae fill up minimum requirement',
+				duration : Ti.UI.NOTIFICATION_DURATION_LONG
+			});
 			toast.show();
 		} else {
 			alert('Pleae fill up minimum requirement');
@@ -47,11 +48,12 @@ function save() {
 						$.txt_newPass.setValue("");
 						$.re_pass.setValue("");
 						$.txt_email.getValue("");
-						var toast = Ti.UI.createNotification({
-							message : 'Password create Successfully',
-							duration : Ti.UI.NOTIFICATION_DURATION_LONG
-						});
+
 						if (OS_ANDROID) {
+							var toast = Ti.UI.createNotification({
+								message : 'Password create Successfully',
+								duration : Ti.UI.NOTIFICATION_DURATION_LONG
+							});
 							toast.show();
 						} else {
 							alert('Password create Successfully');
@@ -65,11 +67,12 @@ function save() {
 			}
 
 		} else {
-			var toast = Ti.UI.createNotification({
-				message : 'password does not match',
-				duration : Ti.UI.NOTIFICATION_DURATION_LONG
-			});
+
 			if (OS_ANDROID) {
+				var toast = Ti.UI.createNotification({
+					message : 'password does not match',
+					duration : Ti.UI.NOTIFICATION_DURATION_LONG
+				});
 				toast.show();
 			} else {
 				alert('password does not match');

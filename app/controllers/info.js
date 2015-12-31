@@ -68,7 +68,8 @@ menuView.menuTable.addEventListener('click', function(e) {
 	$.drawermenu.showhidemenu();
 	$.drawermenu.menuOpen = false;
 	//update menuOpen status to prevent inconsistency.
-	if (e.rowData.id === "row1") {
+	switch(e.rowData.id) {
+	case "about":
 		Alloy.createController('about/about').getView().open({
 			modal : true
 		});
@@ -79,8 +80,8 @@ menuView.menuTable.addEventListener('click', function(e) {
 		} else {
 			activeView = 1;
 		}
-	}
-	if (e.rowData.id === "row2") {
+		break;
+	case "settings":
 		Alloy.createController('setting/setting').getView().open({
 			modal : true
 		});
@@ -90,12 +91,70 @@ menuView.menuTable.addEventListener('click', function(e) {
 		} else {
 			activeView = 2;
 		}
+		break;
+	case "fb":
+
+		if (activeView != 2) {
+			//$.drawermenu.drawermainview.add(configView.getView());
+			activeView = 2;
+		} else {
+			activeView = 2;
+		}
+		break;
+	case "twitter":
+		Alloy.createController('/social/twitter').getView().open();
+	
+		if (activeView != 2) {
+			//$.drawermenu.drawermainview.add(configView.getView());
+			activeView = 2;
+		} else {
+			activeView = 2;
+		}
+		break;
+	case "linkdin":
+
+		var linkDin = require('socialShare');
+		linkDin.linkdinShare();
+
+		if (activeView != 2) {
+			//$.drawermenu.drawermainview.add(configView.getView());
+			activeView = 2;
+		} else {
+			activeView = 2;
+		}
+		break;
+	case "rate":
+		if (OS_ANDROID) {
+			Ti.Platform.openURL("market://details?id=com.bd.PasswordManager");
+		}
+
+		if (activeView != 2) {
+			//$.drawermenu.drawermainview.add(configView.getView());
+			activeView = 2;
+		} else {
+			activeView = 2;
+		}
+		break;
 	}
+
 	// on Android the event is received by the label, so watch out!
 	Ti.API.info(e.rowData.id);
 });
 
-$.win.addEventListener('close', function() {
-	Alloy.Events.off('updateMainUI');
+$.win.addEventListener('androidback', function() {
+	var dialog = Ti.UI.createAlertDialog({
+		buttonNames : ['Confirm', 'Cancel'],
+		message : 'Would you like to exit this App',
+		title : 'Exit'
+	});
+	dialog.addEventListener('click', function(e) {
+		if (e.index === 0) {
+			Alloy.Events.off('updateMainUI');
+			$.win.close();
+
+		}
+
+	});
+	dialog.show();
 });
 

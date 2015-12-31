@@ -57,7 +57,7 @@
 	},
 	left: 20,
 	right: 20,
-	backgroundColor: '#fff'
+
 }
 
 "#pin[formFactor=handheld]":{
@@ -66,12 +66,12 @@
 	height: 50,
 	borderColor: 'gray',
 	font:{
-		fontSize: '20dp',
+		fontSize: '15dp',
 	},
 	color: '#000',
 	left: 20,
 	right: 20,
-	backgroundColor: '#fff'
+
 }
 "#signin":{
 	color:'#fff'

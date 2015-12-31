@@ -3,7 +3,7 @@
 		<View id = "mainView">
 			<View id="mainTopBar">
 				<Button id="back" left="5" onClick="back" backgroundImage="/images/Back.png"></Button>
-				<Label color="green" >Password Manager</Label>
+				<Label color="#fff" >Password Manager</Label>
 			</View>
 			<ScrollView>
 				<View layout="vertical">

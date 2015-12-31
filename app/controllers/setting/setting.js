@@ -29,11 +29,11 @@ function submit() {
 					$.re_pass.setValue("");
 					$.settingWin.close();
 
-					var toast = Ti.UI.createNotification({
-						message : 'Password has been changed successfully',
-						duration : Ti.UI.NOTIFICATION_DURATION_LONG
-					});
 					if (OS_ANDROID) {
+						var toast = Ti.UI.createNotification({
+							message : 'Password has been changed successfully',
+							duration : Ti.UI.NOTIFICATION_DURATION_LONG
+						});
 						toast.show();
 					} else {
 						alert('Password has been changed successfully');
@@ -55,11 +55,11 @@ function submit() {
 				break;
 			} else {
 
-				var toast = Ti.UI.createNotification({
-					message : 'Pleaes provide a correct password!',
-					duration : Ti.UI.NOTIFICATION_DURATION_LONG
-				});
 				if (OS_ANDROID) {
+					var toast = Ti.UI.createNotification({
+						message : 'Pleaes provide a correct password!',
+						duration : Ti.UI.NOTIFICATION_DURATION_LONG
+					});
 					toast.show();
 				} else {
 					alert('Pleaes provide a correct password!');

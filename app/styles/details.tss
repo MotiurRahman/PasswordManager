@@ -23,9 +23,9 @@
 	left: 20
 },
 
-'#Button[formFactor=tablet]': {
+'Button[formFactor=tablet]': {
 	borderWidth: 2,
-	borderColor: 'red',
+	borderColor: 'green',
 	borderRadius: 10,
 	width: 150,
 	color: '#fff',
@@ -34,7 +34,7 @@
 
 'Button': {
 	borderWidth: 2,
-	borderColor: 'red',
+	borderColor: 'green',
 	borderRadius: 10,
 	color: '#fff',
 	width: 80,

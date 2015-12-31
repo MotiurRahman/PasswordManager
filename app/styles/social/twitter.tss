@@ -1,27 +1,19 @@
-".container": {}
-
+"#mainView":{
+	layout: 'vertical',
+	backgroundColor: '#000'
+},
 "#mainTopBar":{
 	width: Ti.UI.FILL,
 	height: "60dp",
 	backgroundColor: '#5B96B2'
 },
-
 "#mainTopBar[formFactor=tablet]":{
 	width: Ti.UI.FILL,
 	height: "100",
 	backgroundColor: '#5B96B2'
 },
-'#back':{
 
-	width: 50,
-	height: 30
-}
 
-'#back[formFactor=tablet]':{
-
-	width: 100,
-	height: 60
-}
 
 "Label":{
 	color: '#fff',
@@ -39,12 +31,21 @@
 	height: 40,
 	backgroundColor: '#fff'
 }
-'#update':{
+'#submit':{
 	borderWidth: 2,
 	borderColor: 'green',
 	borderRadius: 10,
+	width: 80,
+	height: 50
+},
+
+'#back':{
+	width: 50,
+	height: 30
+}
+'#back[formFactor=tablet]':{
 	width: 100,
-	height: 40
+	height: 60
 }
 
 'Label[formFactor=tablet]': {
@@ -61,10 +62,11 @@
 	}
 },
 
-'#update[formFactor=tablet]': {
+'#submit[formFactor=tablet]': {
 	borderWidth: 2,
 	borderColor: 'green',
 	borderRadius: 10,
-	width: 200,
+	width: 150,
 	height: 70
 }
+

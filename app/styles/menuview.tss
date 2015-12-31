@@ -22,15 +22,26 @@
 	width: "20dp",
 	height: "20dp"
 },
-"#rowSkull":{
+"#rowAbout":{
 	backgroundImage: '/images/about.png'
 },
 "#rowGear":{
-	backgroundImage: '/19-gear.png'
+	backgroundImage: '/images/19-gear.png'
 },
-"#rowPicFrame":{
-	backgroundImage: '/41-picture-frame.png'
-},
+"#rowRate":{
+	backgroundImage: '/images/rate.png'
+}
+"#fbShare":{
+	backgroundImage: '/images/fbicon.png'
+}
+"#twiterShare":{
+	backgroundImage: '/images/twicon.png'
+}
+"#linkdinShare":{
+	backgroundImage: '/images/Linicon.png'
+}
+
+
 ".rowLabel":{
 	top: 7,
 	left: 10,

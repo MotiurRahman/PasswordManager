@@ -51,7 +51,6 @@
 
 'Label[formFactor=tablet]': {
 	font: {
-		fontWeight: 'bold',
 		fontSize: '32dp'
 	},
 	color: '#fff'
@@ -65,7 +64,7 @@
 
 '#save[formFactor=tablet]': {
 	borderWidth: 2,
-	borderColor: 'red',
+	borderColor: 'green',
 	borderRadius: 10,
 	width: 150,
 	height: 70

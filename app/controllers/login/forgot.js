@@ -20,11 +20,11 @@ function emailSend(email, pass) {
 	}, function(e) {
 		if (e.success) {
 
-			var toast = Ti.UI.createNotification({
-				message : 'Please check your mail for password',
-				duration : Ti.UI.NOTIFICATION_DURATION_LONG
-			});
 			if (OS_ANDROID) {
+				var toast = Ti.UI.createNotification({
+					message : 'Please check your mail for password',
+					duration : Ti.UI.NOTIFICATION_DURATION_LONG
+				});
 				toast.show();
 			} else {
 				alert('Please check your mail for password');
@@ -41,11 +41,12 @@ function send() {
 	var pass = db.getinfo();
 
 	if (pass.length == 0) {
-		var toast = Ti.UI.createNotification({
-			message : "You have no Account!",
-			duration : Ti.UI.NOTIFICATION_DURATION_LONG
-		});
+
 		if (OS_ANDROID) {
+			var toast = Ti.UI.createNotification({
+				message : "You have no Account!",
+				duration : Ti.UI.NOTIFICATION_DURATION_LONG
+			});
 			toast.show();
 		} else {
 			alert("You have no Account!");
@@ -56,11 +57,12 @@ function send() {
 		for (; ; ) {
 			if ($.txt_email.getValue() == pass[i].email) {
 				if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
-					var toast = Ti.UI.createNotification({
-						message : "Please connect to the internet!",
-						duration : Ti.UI.NOTIFICATION_DURATION_LONG
-					});
+
 					if (OS_ANDROID) {
+						var toast = Ti.UI.createNotification({
+							message : "Please connect to the internet!",
+							duration : Ti.UI.NOTIFICATION_DURATION_LONG
+						});
 						toast.show();
 					} else {
 						alert("Please connect to the internet!");
