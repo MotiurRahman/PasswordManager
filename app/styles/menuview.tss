@@ -40,6 +40,9 @@
 "#linkdinShare":{
 	backgroundImage: '/images/Linicon.png'
 }
+"#whatsappShare":{
+	backgroundImage: '/images/whatsappicon.png'
+}
 
 
 ".rowLabel":{

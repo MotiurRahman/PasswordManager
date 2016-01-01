@@ -93,6 +93,7 @@ menuView.menuTable.addEventListener('click', function(e) {
 		}
 		break;
 	case "fb":
+		Alloy.createController('social/facebook').getView().open();
 
 		if (activeView != 2) {
 			//$.drawermenu.drawermainview.add(configView.getView());
@@ -102,8 +103,8 @@ menuView.menuTable.addEventListener('click', function(e) {
 		}
 		break;
 	case "twitter":
-		Alloy.createController('/social/twitter').getView().open();
-	
+		Alloy.createController('social/twitter').getView().open();
+
 		if (activeView != 2) {
 			//$.drawermenu.drawermainview.add(configView.getView());
 			activeView = 2;
@@ -112,10 +113,20 @@ menuView.menuTable.addEventListener('click', function(e) {
 		}
 		break;
 	case "linkdin":
+		Alloy.createController('social/linkdin').getView().open();
 
-		var linkDin = require('socialShare');
-		linkDin.linkdinShare();
+		if (activeView != 2) {
+			//$.drawermenu.drawermainview.add(configView.getView());
+			activeView = 2;
+		} else {
+			activeView = 2;
+		}
+		break;
 
+	case "whatsapp":
+		//	Alloy.createController('social/linkdin').getView().open();
+		var whatsApp = require('socialShare');
+		whatsApp.whatsappShare();
 		if (activeView != 2) {
 			//$.drawermenu.drawermainview.add(configView.getView());
 			activeView = 2;
@@ -126,6 +137,8 @@ menuView.menuTable.addEventListener('click', function(e) {
 	case "rate":
 		if (OS_ANDROID) {
 			Ti.Platform.openURL("market://details?id=com.bd.PasswordManager");
+		} else {
+			Ti.Platform.openURL("https://itunes.apple.com/us/app/password-security-manager/id1070748246?ls=1&mt=8");
 		}
 
 		if (activeView != 2) {

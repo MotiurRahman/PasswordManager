@@ -1,12 +1,12 @@
 <Alloy>
-	<Window id="twitterWin">
+	<Window id="facebookWin">
 		<View id="mainView">
 			<View id="mainTopBar">
 				<Button id="back" left="5" onClick="back" backgroundImage="/images/Back.png"></Button>
-				<Label color="#fff">Twiter Share</Label>
+				<Label color="#fff">Facebook Share</Label>
 			</View>
 			<Label  top="10" left="20">Write what's on your mind!</Label>
-			<TextField id= 'txt_twitt' top="10"></TextField>
+			<TextField id= 'txt_comment' top="10"></TextField>
 			<Button id="submit" title="Submit" top="20"  color="#fff" onClick="send"></Button>>
 
 		</View>
