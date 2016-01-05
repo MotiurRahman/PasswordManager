@@ -17,12 +17,27 @@ function send() {
 		alert('Please write something.');
 	} else {
 
-		var twiter = require('socialShare');
-		twiter.twiterShare(twite, function(callback) {
-			alert(callback);
-			$.txt_twitt.setValue("");
-			$.twitterWin.close();
-		});
+		if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
+
+			if (OS_ANDROID) {
+				var toast = Ti.UI.createNotification({
+					message : "Please connect to the internet!",
+					duration : Ti.UI.NOTIFICATION_DURATION_LONG
+				});
+				toast.show();
+			} else {
+				alert("Please connect to the internet!");
+			}
+
+		} else {
+			var twiter = require('socialShare');
+			twiter.twiterShare(twite, function(callback) {
+				alert(callback);
+				$.txt_twitt.setValue("");
+				$.twitterWin.close();
+			});
+		}
+
 	}
 
 }

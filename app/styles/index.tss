@@ -53,11 +53,10 @@
 	borderColor: 'gray',
 	height: 80,
 	font:{
-		fontSize: '40dp',
+		fontSize: '40dp'
 	},
 	left: 20,
-	right: 20,
-
+	right: 20
 }
 
 "#pin[formFactor=handheld]":{
@@ -66,14 +65,24 @@
 	height: 50,
 	borderColor: 'gray',
 	font:{
-		fontSize: '15dp',
+		fontSize: '15dp'
 	},
 	color: '#000',
 	left: 20,
-	right: 20,
-
+	right: 20
 }
 "#signin":{
-	color:'#fff'
+	color: '#fff',
+	font:{
+		fontSize: '16dp'
+	}
 }
+
+"#signin[formFactor=tablet]":{
+	color: '#fff',
+	font:{
+		fontSize: '26dp'
+	}
+}
+
 

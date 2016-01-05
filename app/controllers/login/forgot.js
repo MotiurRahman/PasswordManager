@@ -40,6 +40,8 @@ function send() {
 	var db = require('loginDB');
 	var pass = db.getinfo();
 
+	//alert(pass[0].email + '\n' + pass[1].pass);
+
 	if (pass.length == 0) {
 
 		if (OS_ANDROID) {
@@ -52,10 +54,20 @@ function send() {
 			alert("You have no Account!");
 		}
 	} else {
+		if ($.txt_email.getValue() == "") {
+			if (OS_ANDROID) {
+				var toast = Ti.UI.createNotification({
+					message : "Please write your mail!",
+					duration : Ti.UI.NOTIFICATION_DURATION_LONG
+				});
+				toast.show();
+			} else {
+				alert("Please write your mail!");
+			}
+		} else {
 
-		var i = 0;
-		for (; ; ) {
-			if ($.txt_email.getValue() == pass[i].email) {
+			switch($.txt_email.getValue()) {
+			case pass[0].email:
 				if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
 
 					if (OS_ANDROID) {
@@ -69,15 +81,38 @@ function send() {
 					}
 
 				} else {
-					emailSend(pass[i].email, pass[i].pass);
+					emailSend(pass[0].email, pass[0].pass);
+				}
+				break;
+			case pass[1].email:
+				if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
+
+					if (OS_ANDROID) {
+						var toast = Ti.UI.createNotification({
+							message : "Please connect to the internet!",
+							duration : Ti.UI.NOTIFICATION_DURATION_LONG
+						});
+						toast.show();
+					} else {
+						alert("Please connect to the internet!");
+					}
+
+				} else {
+					emailSend(pass[1].email, pass[1].pass);
+				}
+				break;
+			default:
+				if (OS_ANDROID) {
+					var toast = Ti.UI.createNotification({
+						message : "Email Does not Match!",
+						duration : Ti.UI.NOTIFICATION_DURATION_LONG
+					});
+					toast.show();
+				} else {
+					alert("Email Does not Match!");
 				}
 
-				break;
-			} else {
-				alert('Email Does not found!');
-				break;
 			}
-			i++;
 		}
 	}
 

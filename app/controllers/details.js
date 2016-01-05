@@ -16,7 +16,7 @@ $.adView.add(addview);
 $.title.setText('Title: ' + args.title);
 $.email.setText('Email: ' + args.email);
 $.pass.setText('Password: ' + args.pass);
-$.site.setText("URL:" + args.url);
+$.site.setText("URL:" + "https://www."+args.url);
 $.account.setText('Account: ' + args.account);
 $.pin.setText('Pin: ' + args.pin);
 

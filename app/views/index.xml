@@ -4,10 +4,12 @@
 			<View layout="vertical">
 				<Label id="name_and" top="20" platform="android">Password Manager</Label>
 				<Label id="name_ios" top="20" platform="ios">Password Manager</Label>
-				<ImageView id="first" image="/images/open.png" width="200" height="200" top="30"></ImageView>>
-				<TextField id='pin' top="20" passwordMask="true" backgroundColor="#fff" onReturn="done" hintText="Enter Password then press done!"></TextField>
+				<ImageView id="first" image="/images/open.png" width="200" height="200" top="30"></ImageView>
+				<Label top="20" font="10" left="20" color="#fff" platform="android">Enter your Password then press done! </Label>
+				<TextField id='pin' top="5" passwordMask="true" backgroundColor="#fff" onReturn="done" platform="android"></TextField>
+				<TextField id='pin' top="20" passwordMask="true" backgroundColor="#fff" onReturn="done" platform='ios' hintText="Enter Password then press done!"></TextField>
 				<Label id="forgot" top="5" font="10" right="20" color="green" onClick="forgot">Forgot Password!</Label>
-				<Label id="signin" top="20" onClick="onCreate">Create Account</Label>
+				<Label id="signin" top="20" onClick="onCreate">Create Master Password.</Label>
 			</View>
 		</ScrollView>
 	</Window>

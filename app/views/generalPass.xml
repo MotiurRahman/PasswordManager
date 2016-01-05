@@ -2,7 +2,7 @@
 	<Window id="genWin" layout="vertical">
 		<View id="mainTopBar">
 			<Button id="back" left="5" onClick="back" backgroundImage="/images/Back.png"></Button>
-			<Label color="#fff" >Password Manager</Label>>
+			<Label color="#fff" >Create Password Info</Label>>
 		</View>
 		<ScrollView>
 			<View class="container" backgroundColor="#000" layout="vertical">
@@ -12,13 +12,13 @@
 				<Label id="Email" top="10" left="20">Email</Label>
 				<TextField id= 'txt_email' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>
 				<Label id="pass" top="10" left="20">Password</Label>
-				<TextField id= 'txt_pass' top="10" passwordMask="true"></TextField>
+				<TextField id= 'txt_pass' top="10"></TextField>
 				<Label id="acount" top="10" left="20">Account Number</Label>
-				<TextField id= 'txt_account' top="10" ></TextField>
+				<TextField id= 'txt_account' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD"></TextField>
 				<Label id="pin" top="10" left="20">Pin Number</Label>
-				<TextField id= 'txt_pin' top="10" passwordMask="true" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD"></TextField>
-				<Label id="url" top="10" left="20">Site URL</Label>
-				<TextField id= 'txt_url' top="10"></TextField>
+				<TextField id= 'txt_pin' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD"></TextField>
+				<Label id="url" top="10" left="20">Site URL: Except https://www.</Label>
+				<TextField id= 'txt_url' top="10" keyboardType = "Titanium.UI.KEYBOARD_TYPE_URL"></TextField>
 				<Button id="save" title="Save" top="20"  color="#fff" onClick="save"></Button>>
 				<View id="adView" width="Ti.UI.FILL" height="60"></View>
 			</View>

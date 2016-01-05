@@ -38,17 +38,10 @@ exports.twiterShare = function(tweet, callback) {
 
 };
 
-exports.facebookShare = function(title, callback) {
+exports.facebookShare = function() {
 	var fb = require('facebook');
-	fb.addEventListener('shareCompleted', function(e) {
-		if (e.success) {
-			callback('Share request succeeded.');
-		} else {
-			callback('Failed to share.');
-		}
-	});
 
-	var webLink;
+	var webLink = null;
 
 	if (OS_IOS) {
 
@@ -58,9 +51,17 @@ exports.facebookShare = function(title, callback) {
 		webLink = "https://play.google.com/store/apps/details?id=com.bd.PasswordManager";
 	}
 
+	fb.addEventListener('shareCompleted', function(e) {
+		if (e.success) {
+			Ti.API.info('Share request succeeded.');
+		} else {
+			Ti.API.info('Failed to share.');
+		}
+	});
+
 	fb.presentShareDialog({
 		link : webLink,
-		title : title,
+		//title : title,
 		description : 'Password Manager is a great password saving App.',
 		picture : 'http://oi65.tinypic.com/mii974.jpg'
 
@@ -111,7 +112,7 @@ exports.linkdinShare = function(linkdinComment, callback) {
 
 exports.whatsappShare = function() {
 
-	var url = "https://itunes.apple.com/us/app/password-security-manager/id1070748246?ls=1&mt=8";
+	var url = encodeURIComponent("https://itunes.apple.com/us/app/password-security-manager/id1070748246?ls=1&mt=8").replace(/'/g, "%27").replace(/"/g, "%22");
 
 	var whatsappUrl = 'whatsapp://send?text=' + url;
 
@@ -136,8 +137,7 @@ exports.whatsappShare = function() {
 		var isSuccess = Ti.Platform.openURL(AndroidUrl);
 
 		if (!isSuccess) {
-
-			Ti.Platform.openURL("market//details?id=com.whatsapp&hl=en");
+			Ti.Platform.openURL("market://details?id=com.whatsapp&hl=en");
 
 		}
 

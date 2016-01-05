@@ -8,7 +8,7 @@
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
 	font: {
-		fontSize: 25
+		fontSize: 20
 	},
 	left: 20
 },

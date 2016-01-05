@@ -3,7 +3,7 @@
 		<View id="mainView">
 			<View id="mainTopBar">
 				<Button id="back" left="5" onClick="back" backgroundImage="/images/Back.png"></Button>
-				<Label color="#fff">Password Manager</Label>
+				<Label color="#fff">Forgot Password</Label>
 			</View>
 			<Label  top="10" left="20">Your Email Address</Label>
 			<TextField id= 'txt_email' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>

@@ -19,9 +19,9 @@ function refresh() {
 		var rowHeight;
 
 		if (isTablet) {
-			rowHeight = 80;
+			rowHeight = 70;
 		} else {
-			rowHeight = 50;
+			rowHeight = 40;
 		}
 
 		return rowHeight;
@@ -33,8 +33,8 @@ function refresh() {
 			properties : {
 				id : data[i].id,
 				title : data[i].title,
-				pass : data[i].email,
-				email : data[i].pass,
+				email : data[i].email,
+				pass : data[i].pass,
 				account : data[i].account,
 				pin : data[i].pin,
 				url : data[i].url,
@@ -43,7 +43,25 @@ function refresh() {
 					fontSize : 25
 
 				},
-				//height : heightValue(),
+				// height : heightValue(),
+				// backgroundGradient : {
+					// type : 'linear',
+					// startPoint : {
+						// x : '0%',
+						// y : '0%'
+					// },
+					// endPoint : {
+						// x : '0%',
+						// y : '100%'
+					// },
+					// colors : [{
+						// color : '#0091EA',
+						// offset : 0.0
+					// }, {
+						// color : '#0277BD',
+						// offset : 0.5
+					// }]
+				// },
 				color : (OS_ANDROID) ? "#fff" : "#000",
 
 			}

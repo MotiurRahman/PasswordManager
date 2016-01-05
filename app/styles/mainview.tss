@@ -60,7 +60,7 @@
 
 '#name[formFactor=tablet]':{
 	font:{
-		fontSize: '35dp',
+		fontSize: '40dp',
 		fontFamily: 'Arizonia-Regular'
 	},
 	color: '#fff'

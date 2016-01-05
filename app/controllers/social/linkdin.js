@@ -18,13 +18,27 @@ function send() {
 
 	} else {
 
-		//var contentLink = "https://play.google.com/store/apps/details?id=com.bd.PasswordManager";
-		var link = require('socialShare');
-		link.linkdinShare(linkdin, function(callback) {
-			alert(callback);
-			$.txt_comment.setValue("");
-			$.linkdinWin.close();
-		});
+		if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
+
+			if (OS_ANDROID) {
+				var toast = Ti.UI.createNotification({
+					message : "Please connect to the internet!",
+					duration : Ti.UI.NOTIFICATION_DURATION_LONG
+				});
+				toast.show();
+			} else {
+				alert("Please connect to the internet!");
+			}
+
+		} else {
+			var link = require('socialShare');
+			link.linkdinShare(linkdin, function(callback) {
+				alert(callback);
+				$.txt_comment.setValue("");
+				$.linkdinWin.close();
+			});
+		}
+
 	}
 
 }

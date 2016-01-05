@@ -93,7 +93,22 @@ menuView.menuTable.addEventListener('click', function(e) {
 		}
 		break;
 	case "fb":
-		Alloy.createController('social/facebook').getView().open();
+		if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
+
+			if (OS_ANDROID) {
+				var toast = Ti.UI.createNotification({
+					message : "Please connect to the internet!",
+					duration : Ti.UI.NOTIFICATION_DURATION_LONG
+				});
+				toast.show();
+			} else {
+				alert("Please connect to the internet!");
+			}
+
+		} else {
+			var facebookDialog = require('socialShare');
+			facebookDialog.facebookShare();
+		}
 
 		if (activeView != 2) {
 			//$.drawermenu.drawermainview.add(configView.getView());
@@ -124,9 +139,23 @@ menuView.menuTable.addEventListener('click', function(e) {
 		break;
 
 	case "whatsapp":
-		//	Alloy.createController('social/linkdin').getView().open();
-		var whatsApp = require('socialShare');
-		whatsApp.whatsappShare();
+		if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
+
+			if (OS_ANDROID) {
+				var toast = Ti.UI.createNotification({
+					message : "Please connect to the internet!",
+					duration : Ti.UI.NOTIFICATION_DURATION_LONG
+				});
+				toast.show();
+			} else {
+				alert("Please connect to the internet!");
+			}
+
+		} else {
+			var whatsApp = require('socialShare');
+			whatsApp.whatsappShare();
+		}
+
 		if (activeView != 2) {
 			//$.drawermenu.drawermainview.add(configView.getView());
 			activeView = 2;

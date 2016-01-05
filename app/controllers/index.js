@@ -64,7 +64,7 @@ function onCreate(e) {
 		}
 	} else {
 		Alloy.createController('login/login').getView().open({
-			modal : true
+			//modal : true
 		});
 	}
 }
