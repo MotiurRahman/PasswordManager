@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.bd.PasswordManager</id>
     <name>PasswordManager</name>
-    <version>1.1</version>
+    <version>2.2</version>
     <publisher>motiurrahman</publisher>
     <url>http://</url>
     <description>undefined</description>
@@ -11,7 +11,7 @@
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>1789d96a-b6f5-4fad-9aaa-a74998292eb3</guid>
+    <guid>18e5b7aa-6163-4beb-9fff-39ca24174a4a</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <property name="acs-grouped-notification-message" type="string">You have $number$ unread messages.</property>
     <ios>
@@ -73,11 +73,13 @@
         <manifest android:installLocation="preferExternal"
             android:versionCode="7" android:versionName="1.6" package="com.bd.PasswordManager">
             <application android:theme="@style/Theme.NoActionBar">
-                <activity android:label="@string/app_name"
-                    android:name="com.facebook.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+                <activity android:name="com.facebook.FacebookActivity" 
+                          android:theme="@android:style/Theme.Translucent.NoTitleBar" 
+                          android:label="PasswordManager" 
+                          android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
                 <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
             </application>
-            <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23"/>
+            <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="24"/>
         </manifest>
     </android>
     <mobileweb>
@@ -89,38 +91,40 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="commonjs" version="3.2.10">ti.cloud</module>
-        <module platform="android" version="3.4.1">ti.cloudpush</module>
-        <module platform="iphone" version="1.9.0">ti.admob</module>
-        <module platform="android" version="2.1.6">ti.admob</module>
-        <module platform="android" version="4.0.5">facebook</module>
-        <module platform="iphone" version="5.0.0">facebook</module>
+        <module platform="commonjs" version="3.2.11">ti.cloud</module>
+        <module platform="iphone" version="5.4.0">facebook</module>
+        <module platform="android" version="6.2.0">facebook</module>
+        <module platform="android" version="3.0.1">ti.admob</module>
+        <module platform="iphone" version="2.1.1">ti.admob</module>
+        <module platform="android" version="4.0.3">ti.cloudpush</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
         <target device="ipad">true</target>
         <target device="iphone">true</target>
-        <target device="mobileweb">true</target>
+        <target device="mobileweb">false</target>
         <target device="windows">false</target>
     </deployment-targets>
-    <sdk-version>5.1.1.GA</sdk-version>
+    <sdk-version>6.0.4.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
+    <property name="android.javac.maxmemory" type="string">1024M</property>
+    <property name="android.dx.maxmemory" type="string">2048M</property>
     <property name="appc-app-id" type="string">565025bd1c214fda5258b366</property>
     <property name="com-appcelerator-apm-id" type="string">566806efcb99e10e00c7e9b7</property>
     <property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property>
     <property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property>
-    <property name="acs-oauth-secret-development" type="string">hfOYyY4AobSzQPS94Cx2RSdvmvWCJfEV</property>
-    <property name="acs-oauth-key-development" type="string">plocbPDwFp2YZebnUd2C9ikMBO8MMccn</property>
-    <property name="acs-api-key-development" type="string">t4VZNVow2o5cKYVq2lqQtr2cha9mjgCf</property>
+    <property name="acs-oauth-secret-development" type="string">Kg7bSIMF9n0QfMHZJqcj5O7kVQLzGOrb</property>
+    <property name="acs-oauth-key-development" type="string">62O4fMfylwlc8UtHBqIQotwIrXCSkyLl</property>
+    <property name="acs-api-key-development" type="string">cISVYibxbrxVfHF3RqH4zrGED4oI1zSH</property>
     <property name="acs-username-development" type="string">appc_app_user_dev</property>
     <property name="acs-password-development" type="string">JgLJ58mwa98wv3W6b5</property>
     <property name="acs-authbase-url-production" type="string">https://secure-identity.cloud.appcelerator.com</property>
     <property name="acs-base-url-production" type="string">https://api.cloud.appcelerator.com</property>
-    <property name="acs-oauth-secret-production" type="string">GHE2Bcm4AA3DexR9B1YODkKRRL07uf6a</property>
-    <property name="acs-oauth-key-production" type="string">ZlS7FkiJ2eWdPer3aVpT2NJlnh9RaUwy</property>
-    <property name="acs-api-key-production" type="string">YemcGSzjWE642PXUKcd4LuulduqhtAhW</property>
+    <property name="acs-oauth-secret-production" type="string">97I6QlhMSQfwnNuVQZ3UZoYaFzB58aXU</property>
+    <property name="acs-oauth-key-production" type="string">bjHvmRpdDXCVCRF3gcVjPye6mwdOZWXn</property>
+    <property name="acs-api-key-production" type="string">JYgsv5kRjNWnKRH5fD16qiquNBjL2Fcp</property>
     <property name="acs-username-production" type="string">appc_app_user</property>
     <property name="acs-password-production" type="string">547Fi1BMoSyyqIZMWl</property>
     <property name="appc-org-id" type="string">100000429</property>

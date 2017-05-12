@@ -39,7 +39,7 @@
 	height: 40,
 	backgroundColor: '#fff'
 }
-'#update':{
+'#updateID':{
 	borderWidth: 2,
 	borderColor: 'green',
 	borderRadius: 10,
@@ -61,7 +61,7 @@
 	}
 },
 
-'#update[formFactor=tablet]': {
+'#updateID[formFactor=tablet]': {
 	borderWidth: 2,
 	borderColor: 'green',
 	borderRadius: 10,

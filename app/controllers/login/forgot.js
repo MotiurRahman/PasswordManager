@@ -1,5 +1,18 @@
 var args = arguments[0] || {};
 
+// Create a Label.
+var sending = Ti.UI.createLabel({
+	text : 'Mail Sending ........',
+	color : 'green',
+	font : {
+		fontSize : 20
+	},
+	top : 20,
+	height : Ti.UI.SIZE,
+	width : Ti.UI.SIZE,
+
+});
+
 var ad = require('admob');
 
 var addview;
@@ -27,11 +40,15 @@ function emailSend(email, pass) {
 				});
 				toast.show();
 			} else {
-				alert('Please check your mail for password');
+				$.txt_email.setValue("");
+				sending.text = "Please check your mail for password";
+				//alert('Please check your mail for password');
 			}
 		} else {
-			alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
-			alert('Your forgot password:' + pass);
+			$.txt_email.setValue("");
+			sending.text = 'Your forgot password:' + pass;
+			//alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+			//alert('Your forgot password:' + pass);
 		}
 	});
 }
@@ -81,26 +98,14 @@ function send() {
 					}
 
 				} else {
+
+					// Add to the parent view.
+					$.mainView.add(sending);
 					emailSend(pass[0].email, pass[0].pass);
+
 				}
 				break;
-			case pass[1].email:
-				if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
 
-					if (OS_ANDROID) {
-						var toast = Ti.UI.createNotification({
-							message : "Please connect to the internet!",
-							duration : Ti.UI.NOTIFICATION_DURATION_LONG
-						});
-						toast.show();
-					} else {
-						alert("Please connect to the internet!");
-					}
-
-				} else {
-					emailSend(pass[1].email, pass[1].pass);
-				}
-				break;
 			default:
 				if (OS_ANDROID) {
 					var toast = Ti.UI.createNotification({

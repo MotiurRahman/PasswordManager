@@ -30,11 +30,11 @@ function save() {
 				//Ti.App.fireEvent('update');
 				Alloy.Events.trigger('updateMainUI');
 				// $.genWin.close({
-					// transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
+				// transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
 				// });
 				$.genWin.close();
 				$.genWin == null;
-				
+
 			}
 
 		});
@@ -43,10 +43,12 @@ function save() {
 
 }
 
+//
 function back() {
 	// $.genWin.close({
-		// transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
+	// transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
 	// });
 	$.genWin.close();
 }
 
+//

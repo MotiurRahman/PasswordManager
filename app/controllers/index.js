@@ -1,36 +1,30 @@
 function done(e) {
 	var db = require('loginDB');
 	var pass = db.getinfo();
-	if (pass.length >= 1) {
-		var i = 0;
-		for (; ; ) {
-			if ($.pin.getValue() == pass[i].pass) {
+	if (pass.length > 0) {
+		if ($.pin.getValue() == pass[0].pass) {
 
-				if (OS_ANDROID) {
+			if (OS_ANDROID) {
 
-					Alloy.createController('info').getView().open();
-				} else {
-					Alloy.createController('info').getView().open({
-						transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
-					});
-				}
-
-				break;
+				Alloy.createController('info').getView().open();
 			} else {
-
-				if (OS_ANDROID) {
-					var toast = Ti.UI.createNotification({
-						message : 'Pleaes provide a correct password!',
-						duration : Ti.UI.NOTIFICATION_DURATION_LONG
-					});
-					toast.show();
-				} else {
-					alert('Pleaes provide a correct password!');
-				}
-
-				break;
+				Alloy.createController('info').getView().open({
+					transition : Ti.UI.iOS.AnimationStyle.FLIP_FROM_LEFT
+				});
 			}
-			i++;
+
+		} else {
+
+			if (OS_ANDROID) {
+				var toast = Ti.UI.createNotification({
+					message : 'Pleaes provide a correct password!',
+					duration : Ti.UI.NOTIFICATION_DURATION_LONG
+				});
+				toast.show();
+			} else {
+				alert('Pleaes provide a correct password!');
+			}
+
 		}
 	} else {
 
@@ -51,7 +45,7 @@ function onCreate(e) {
 	var db = require('loginDB');
 	var pass = db.getinfo().length;
 	Ti.API.info("passwordLength:" + pass);
-	if (pass > 1) {
+	if (pass > 0) {
 
 		if (OS_ANDROID) {
 			var toast = Ti.UI.createNotification({
@@ -77,7 +71,7 @@ function forgot() {
 
 	} else {
 		Alloy.createController('login/forgot').getView().open({
-			transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+			transition : Ti.UI.iOS.AnimationStyle.FLIP_FROM_LEFT
 		});
 	}
 

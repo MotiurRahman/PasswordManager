@@ -1,17 +1,17 @@
 <Alloy>
-	<Window id="settingWin">
-		<View id="mainView">
-			<View id="mainTopBar">
-				<Button id="back" left="5" onClick="back" backgroundImage="/images/Back.png"></Button>
-				<Label color="#fff">Forgot Password</Label>
-			</View>
-			<Label  top="10" left="20">Your Email Address</Label>
-			<TextField id= 'txt_email' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL"></TextField>
-			<Button id="submit" title="Submit" top="20"  color="#fff" onClick="send"></Button>>
+    <Window id="settingWin">
+        <View id="mainView">
+            <View id="mainTopBar">
+                <Button backgroundImage="/images/Back.png" id="back" left="5" onClick="back"/>
+                <Label color="#fff">Forgot Password</Label>
+            </View>
+            <Label left="20" top="10">Your Email Address</Label>
+            <TextField id="txt_email" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL" top="10"/>
+            <Button color="#fff" id="submit" onClick="send" title="Submit" top="20"/>&gt;
 
 		</View>
-		<View  width="Ti.UI.Fill" height="60" bottom="0">
-			<View id="adView" width="Ti.UI.FILL" height="60"></View>
-		</View>
-	</Window>
+        <View bottom="0" height="60" width="Ti.UI.Fill">
+            <View height="60" id="adView" width="Ti.UI.FILL"/>
+        </View>
+    </Window>
 </Alloy>

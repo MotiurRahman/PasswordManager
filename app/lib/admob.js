@@ -17,7 +17,7 @@ exports.addMob_iOS = function() {
 			"name" : "PasswordManager"
 		},
 		tagForChildDirectedTreatment : false, // http:///business.ftc.gov/privacy-and-security/childrens-privacy for more infos
-		keywords : ['keyword1', 'keyword2']
+		keywords : ['password manager', 'password security manager']
 	});
 
 	ad.addEventListener('didReceiveAd', function() {
@@ -42,11 +42,8 @@ exports.addMob_android = function() {
 		textColor : "#000000", // optional - Text color
 		urlColor : "#00FF00", // optional - URL color
 		linkColor : "#0000FF" //optional -  Link text color
-		//primaryTextColor: "blue", // deprecated -- now maps to textColor
-		//secondaryTextColor: "green" // deprecated -- now maps to linkColor
 
 	});
-
 
 	return adMobView;
 

@@ -1,6 +1,7 @@
 var args = arguments[0] || {};
 //alert(args.title);
 
+
 var ad = require('admob');
 
 var addview;
@@ -10,7 +11,8 @@ if (OS_ANDROID) {
 	addview = ad.addMob_iOS();
 }
 
-$.adView.add(addview);
+$.adView.add(addview); 
+
 
 $.txt_title.setValue(args.title);
 $.txt_email.setValue(args.email);
@@ -25,7 +27,7 @@ function back() {
 		$.updateWin.close();
 	} else {
 		$.updateWin.close({
-			transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
+			transition : Ti.UI.iOS.AnimationStyle.FLIP_FROM_RIGHT
 		});
 	}
 

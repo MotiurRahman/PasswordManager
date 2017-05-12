@@ -45,22 +45,22 @@ function refresh() {
 				},
 				// height : heightValue(),
 				// backgroundGradient : {
-					// type : 'linear',
-					// startPoint : {
-						// x : '0%',
-						// y : '0%'
-					// },
-					// endPoint : {
-						// x : '0%',
-						// y : '100%'
-					// },
-					// colors : [{
-						// color : '#0091EA',
-						// offset : 0.0
-					// }, {
-						// color : '#0277BD',
-						// offset : 0.5
-					// }]
+				// type : 'linear',
+				// startPoint : {
+				// x : '0%',
+				// y : '0%'
+				// },
+				// endPoint : {
+				// x : '0%',
+				// y : '100%'
+				// },
+				// colors : [{
+				// color : '#0091EA',
+				// offset : 0.0
+				// }, {
+				// color : '#0277BD',
+				// offset : 0.5
+				// }]
 				// },
 				color : (OS_ANDROID) ? "#fff" : "#000",
 

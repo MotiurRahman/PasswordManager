@@ -1,5 +1,6 @@
 var args = arguments[0] || {};
 
+
 var ad = require('admob');
 
 var addview;
@@ -9,7 +10,8 @@ if (OS_ANDROID) {
 	addview = ad.addMob_iOS();
 }
 
-$.adView.add(addview);
+$.adView.add(addview); 
+
 
 function submit() {
 	var db = require('loginDB');
@@ -41,11 +43,11 @@ function submit() {
 
 				} else {
 
-					var toast = Ti.UI.createNotification({
-						message : 'password does not match',
-						duration : Ti.UI.NOTIFICATION_DURATION_LONG
-					});
 					if (OS_ANDROID) {
+						var toast = Ti.UI.createNotification({
+							message : 'password does not match',
+							duration : Ti.UI.NOTIFICATION_DURATION_LONG
+						});
 						toast.show();
 					} else {
 						alert('password does not match');

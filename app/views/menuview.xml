@@ -1,5 +1,5 @@
 <Alloy>
-	<View id="menuView">
+	<View id="menuView" zIndex="3">
 		<View id="menuTopBar"/>
 		<TableView class="menuTable" id="menuTable">
 			<TableViewRow class="tableRow" id="about">
