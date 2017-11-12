@@ -14,3 +14,6 @@
 //com.bd.PasswordManager
 
 Alloy.Events = _.clone(Backbone.Events);
+
+Alloy.Globals.apm = require("com.appcelerator.apm");
+Alloy.Globals.apm.init();

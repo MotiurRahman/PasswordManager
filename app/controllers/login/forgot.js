@@ -41,11 +41,13 @@ function emailSend(email, pass) {
 				toast.show();
 			} else {
 				$.txt_email.setValue("");
+				$.txt_email.blur();
 				sending.text = "Please check your mail for password";
 				//alert('Please check your mail for password');
 			}
 		} else {
 			$.txt_email.setValue("");
+			$.txt_email.blur();
 			sending.text = 'Your forgot password:' + pass;
 			//alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 			//alert('Your forgot password:' + pass);
@@ -94,12 +96,14 @@ function send() {
 						});
 						toast.show();
 					} else {
+						$.txt_email.blur();
 						alert("Please connect to the internet!");
 					}
 
 				} else {
 
 					// Add to the parent view.
+					$.txt_email.blur();
 					$.mainView.add(sending);
 					emailSend(pass[0].email, pass[0].pass);
 
@@ -114,6 +118,7 @@ function send() {
 					});
 					toast.show();
 				} else {
+					$.txt_email.blur();
 					alert("Email Does not Match!");
 				}
 
