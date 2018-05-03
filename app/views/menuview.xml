@@ -14,30 +14,30 @@
 					<Label id="rowLabel" class="rowLabel">Settings</Label>
 				</View>
 			</TableViewRow>
-			<TableViewRow class="tableRow" id="fb">
+			<!-- <TableViewRow class="tableRow" id="fb">
 				<View id="rowContainer">
 					<View id="fbShare" class="rowIcon"/>
 					<Label id="rowLabel" class="rowLabel">Facebook Share</Label>
 				</View>
-			</TableViewRow>
-			<TableViewRow class="tableRow" id="twitter">
+			</TableViewRow> -->
+			<!-- <TableViewRow class="tableRow" id="twitter">
 				<View id="rowContainer">
 					<View id="twiterShare" class="rowIcon"/>
 					<Label id="rowLabel" class="rowLabel">Twitter Share</Label>
 				</View>
-			</TableViewRow>
-			<TableViewRow class="tableRow" id="linkdin">
+			</TableViewRow> -->
+			<!-- <TableViewRow class="tableRow" id="linkdin">
 				<View id="rowContainer">
 					<View id="linkdinShare" class="rowIcon"/>
 					<Label id="rowLabel" class="rowLabel">Linkdin Share</Label>
 				</View>
-			</TableViewRow>
-			<TableViewRow class="tableRow" id="whatsapp">
+			</TableViewRow> -->
+			<!-- <TableViewRow class="tableRow" id="whatsapp">
 				<View id="rowContainer">
 					<View id="whatsappShare" class="rowIcon"/>
 					<Label id="rowLabel" class="rowLabel">Whatsapp Share</Label>
 				</View>
-			</TableViewRow>
+			</TableViewRow> -->
 			<TableViewRow class="tableRow" id="rate">
 				<View id="rowContainer">
 					<View id="rowRate" class="rowIcon"/>

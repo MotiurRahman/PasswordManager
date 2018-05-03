@@ -40,7 +40,7 @@ exports.twiterShare = function(tweet, callback) {
 
 exports.facebookShare = function() {
 	var fb = require('facebook');
-	fb.initialize();
+	//fb.initialize();
 	var webLink = null;
 
 	if (OS_IOS) {
@@ -59,14 +59,17 @@ exports.facebookShare = function() {
 		}
 	});
 
-	fb.presentShareDialog({
-		link : webLink,
-		//title : title,
-		description : 'Password Manager is a great password saving App.',
-		picture : 'http://oi65.tinypic.com/mii974.jpg',
-		mode : fb.SHARE_DIALOG_MODE_AUTOMATIC
 
-	});
+fb.presentShareDialog({
+link:webLink,
+title : title,
+description : 'Password Manager is a great password saving App.',
+picture : 'http://oi65.tinypic.com/mii974.jpg',
+hashtag:'Password Security'
+});
+
+	
+	
 
 };
 

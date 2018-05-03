@@ -133,35 +133,7 @@ $.elementsList.addEventListener('itemclick', function(e) {
 
 });
 
-// method is exposed by widget
 
-// get config view as objects
-// var configView = controls.getConfigView();
-//
-// //add menu view to ConfigView exposed by widget
-// configView.menuButton.add(controls.getMenuButtonLeft({
-// h : '60',
-// w : '60'
-// }));
-//
-// //Minor changes to click event. Update the menuOpen status;
-// configView.menuButton.addEventListener('click', function() {
-// $.drawermenu.showhidemenu();
-// $.drawermenu.menuOpen = !$.drawermenu.menuOpen;
-// });
-// // method is exposed by widget
-//
-// $.drawermenu.init({
-// menuview : menuView.getView(),
-// mainview : mainView.getView(),
-// duration : 200,
-// parent : $.win
-// });
-//
-// //variable to controler de open/close slide
-// var activeView = 1;
-
-//id="menuTable"
 
 var menuView = Alloy.createController('menuview');
 

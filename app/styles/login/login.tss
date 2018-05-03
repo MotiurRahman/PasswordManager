@@ -14,6 +14,16 @@
 	backgroundColor: '#5B96B2'
 },
 
+"#scroll":{
+	//height: '80%',
+	//width: '80%',
+	//contentHeight: Ti.UI.SIZE,
+	//contentWidth: Ti.UI.SIZE,
+	horizontalBounce: false,
+	horizontalWrap: false
+},
+
+
 
 
 "Label":{

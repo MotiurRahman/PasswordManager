@@ -78,7 +78,7 @@ function forgot() {
 }
 
 if (OS_ANDROID) {
-	var push = require("push");
+	var push = require("push_android");
 } else {
 	var push = require("push_iOS");
 }

@@ -3,7 +3,7 @@ exports.pushSubscribe = function() {
 
 	var Cloud = require("ti.cloud");
 	var deviceToken = null;
-	if ((Ti.Platform.osname === 'iphone' || Ti.Platform.osname === 'ipad') && parseInt(Ti.Platform.version.split(".")[0]) >= 8) {
+	if (parseInt(Ti.Platform.version.split(".")[0]) >= 8) {
 
 		// Wait for user settings to be registered before registering for push notifications
 		Ti.App.iOS.addEventListener('usernotificationsettings', function registerForPush() {
