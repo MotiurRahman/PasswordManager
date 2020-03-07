@@ -1,6 +1,7 @@
 var args = arguments[0] || {};
 
 
+/*
 var ad = require('admob');
 
 var addview;
@@ -11,6 +12,7 @@ if (OS_ANDROID) {
 }
 
 $.adView.add(addview); 
+*/
 
 
 //alert("Title:"+args.title);
@@ -18,12 +20,14 @@ $.adView.add(addview);
 $.title.setText('Title: ' + args.title);
 $.email.setText('Email: ' + args.email);
 $.pass.setText('Password: ' + args.pass);
-$.site.setText("URL:" + "https://www."+args.url);
+$.site.setText("URL:" + "https://"+args.url);
 $.account.setText('Account: ' + args.account);
 $.pin.setText('Pin: ' + args.pin);
 
+var mailURL = "https://"+args.url;
+
 function openURL() {
-	Ti.Platform.openURL(args.url);
+	Ti.Platform.openURL(mailURL);
 }
 
 function close() {

@@ -25,8 +25,10 @@
 
 'Button[formFactor=tablet]': {
 	borderWidth: 2,
-	borderColor: 'green',
+	borderColor: 'gray',
 	borderRadius: 10,
+	backgroundColor: "#5B96B2",
+	backgroundSelectedColor: "gray",
 	width: 150,
 	color: '#fff',
 	height: 70
@@ -34,7 +36,9 @@
 
 'Button': {
 	borderWidth: 2,
-	borderColor: 'green',
+	borderColor: 'gray',
+	backgroundColor: "#5B96B2",
+	backgroundSelectedColor: "gray",
 	borderRadius: 10,
 	color: '#fff',
 	width: 80,

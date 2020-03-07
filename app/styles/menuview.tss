@@ -5,7 +5,8 @@
 "#menuTopBar":{
 	width: Ti.UI.FILL,
 	height: "60dp",
-	backgroundColor: '#3D3D3D',
+	//backgroundColor: '#3D3D3D',
+	backgroundColor: '#5B96B2',
 	//backgroundColor: 'green',
 	layout: 'horizontal'
 },

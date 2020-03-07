@@ -13,6 +13,7 @@ var sending = Ti.UI.createLabel({
 
 });
 
+/*
 var ad = require('admob');
 
 var addview;
@@ -23,6 +24,7 @@ if (OS_ANDROID) {
 }
 
 $.adView.add(addview);
+*/
 
 function emailSend(email, pass) {
 	var Cloud = require('ti.cloud');

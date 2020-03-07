@@ -1,3 +1,30 @@
+//Apple Login
+
+if (OS_IOS) {
+
+	var AppleSignIn = require('ti.applesignin');
+
+	AppleSignIn.addEventListener('login', function(event) {
+		if (!event.success) {
+			alert(event.error);
+			return;
+		}
+
+		Ti.API.warn(event);
+	});
+
+	var btn = AppleSignIn.createLoginButton({
+		width : 280,
+		height : 38
+	});
+
+	btn.addEventListener('click', function() {
+		AppleSignIn.authorize();
+	});
+}
+
+///Apple login end
+
 function done(e) {
 	var db = require('loginDB');
 	var pass = db.getinfo();

@@ -11,6 +11,6 @@
 				<ListSection name="elements" />
 			</ListView>
 		</View>
-		<View id='adView' width="Ti.UI.FILL" height="60" bottom="0" zIndex="2"/>
+		<!-- <View id='adView' width="Ti.UI.FILL" height="60" bottom="0" zIndex="2"/> -->
 	</View>
 </Alloy>

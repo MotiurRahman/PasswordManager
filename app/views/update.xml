@@ -1,11 +1,11 @@
 <Alloy>
-    <Window id="updateWin" layout="vertical">
+    <Window id="updateWin" layout="vertical" extendSafeArea="false">
         <View id="mainTopBar">
             <Button backgroundImage="/images/Back.png" id="back" left="5" onClick="back"/>
             <Label color="#fff">Update Information</Label>&gt;
 		</View>
         <ScrollView>
-            <View backgroundColor="#000" class="container" layout="vertical">
+            <View backgroundColor="#000" class="container" layout="vertical" height="1000dp" width="Ti.UI.FILL">
                 <Label id="title_name" left="20" top="10">Title Name</Label>
                 <TextField id="txt_title" top="10"/>
                 <Label id="Email" left="20" top="10">Email</Label>

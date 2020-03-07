@@ -1,5 +1,5 @@
 <Alloy>
-    <Window class="container" title="Password Manager">
+    <Window class="container" title="Password Manager" extendSafeArea="false">
         <ScrollView>
             <View layout="vertical">
                 <Label id="name_and" platform="android" top="20">Password Manager</Label>

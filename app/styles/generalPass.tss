@@ -43,8 +43,10 @@
 }
 '#save':{
 	borderWidth: 2,
-	borderColor: 'green',
 	borderRadius: 10,
+	borderColor: 'gray',
+	backgroundColor: "#5B96B2",
+	backgroundSelectedColor:"gray",
 	width: 80,
 	height: 50
 }
@@ -64,7 +66,9 @@
 
 '#save[formFactor=tablet]': {
 	borderWidth: 2,
-	borderColor: 'green',
+	borderColor: 'gray',
+	backgroundColor: "#5B96B2",
+	backgroundSelectedColor:"gray",
 	borderRadius: 10,
 	width: 150,
 	height: 70

@@ -1,6 +1,6 @@
 ".container[platform=ios]": {
-	top: 20,
-	backgroundColor: "white",
+	//top: 20,
+	backgroundColor: "#5B96B2",
 	statusBarStyle:Ti.UI.iOS.StatusBar.LIGHT_CONTENT,
 	orientationModes: [],
 	navBarHidden: true

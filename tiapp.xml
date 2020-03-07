@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.bd.PasswordManager</id>
+    <id>com.bd.PasswordManagerPro</id>
     <name>PasswordManager</name>
     <version>3.7</version>
     <publisher>motiurrahman</publisher>
@@ -19,20 +19,6 @@
         <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
         <plist>
             <dict>
-                <key>CFBundleURLTypes</key>
-                <array>
-                    <dict>
-                        <key>CFBundleURLName</key>
-                        <!-- Application ID same as the id value in the tiapp.xml file -->
-                        <string>com.bd.PasswordManager</string>
-                        <key>CFBundleURLSchemes</key>
-                        <array>
-                            <!-- Prefix the Facebook App ID with 'fb' -->
-                            <string>fb882022158583818</string>
-                            <string>touchtest-passwordmanager</string>
-                        </array>
-                    </dict>
-                </array>
                 <key>FacebookAppID</key>
                 <!-- Facebook App ID -->
                 <string>882022158583818</string>
@@ -74,23 +60,15 @@
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest>
-            <application>
+            <application android:theme="@style/Theme.NoActionBar">
                 <activity
                     android:configChanges="keyboardHidden|orientation"
-                    android:label="PasswordManager"
-                    android:name=".PasswordmanagerActivity" android:theme="@style/Theme.Titanium">
+                    android:label="PasswordManager" android:name=".PasswordmanagerActivity">
                     <intent-filter>
                         <action android:name="android.intent.action.MAIN"/>
                         <category android:name="android.intent.category.LAUNCHER"/>
                     </intent-filter>
-                    <intent-filter>
-                        <data android:scheme="touchtest-passwordmanager"/>
-                        <action android:name="android.intent.action.VIEW"/>
-                        <category android:name="android.intent.category.BROWSABLE"/>
-                        <category android:name="android.intent.category.DEFAULT"/>
-                    </intent-filter>
                 </activity>
-                <service android:enabled="true" android:exported="false" android:name="com.soasta.android.touchtest.TouchTestService"/>
             </application>
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
             <uses-permission android:name="android.permission.INTERNET"/>
@@ -101,48 +79,37 @@
         </manifest>
     </android>
     <modules>
+        <module platform="android">ti.cloudpush</module>
+        <module platform="iphone">ti.applesignin</module>
         <module platform="commonjs" version="3.2.11">ti.cloud</module>
-        <module platform="android">com.appcelerator.apm</module>
-        <module platform="iphone">com.appcelerator.apm</module>
-        <module platform="android">ti.admob</module>
-        <module platform="iphone" version="2.2.0">ti.admob</module>
-        <module platform="windows">hyperloop</module>
-        <module platform="android">hyperloop</module>
-        <module platform="iphone">hyperloop</module>
-        <module platform="iphone" version="3.0">com.soasta.touchtest</module>
-        <module platform="android" version="3.0">com.soasta.touchtest</module>
     </modules>
     <deployment-targets>
-        <target device="mobileweb">false</target>
-        <target device="android">false</target>
+        <target device="android">true</target>
         <target device="ipad">true</target>
         <target device="iphone">true</target>
     </deployment-targets>
-    <sdk-version>7.1.0.GA</sdk-version>
+    <sdk-version>8.3.1.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
-        <plugin>com.soasta.touchtest.android</plugin>
     </plugins>
     <property name="android.javac.maxmemory" type="string">1024M</property>
     <property name="android.dx.maxmemory" type="string">2048M</property>
     <property name="appc-app-id" type="string">5a02a73a2836cd7bad44a43e</property>
-    <property name="com-appcelerator-apm-id" type="string">79ae2ba3ac594e68924e5588ddb397cc00555300</property>
+    
     <property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property>
     <property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property>
-    <property name="acs-oauth-secret-development" type="string">Kg7bSIMF9n0QfMHZJqcj5O7kVQLzGOrb</property>
-    <property name="acs-oauth-key-development" type="string">62O4fMfylwlc8UtHBqIQotwIrXCSkyLl</property>
-    <property name="acs-api-key-development" type="string">cISVYibxbrxVfHF3RqH4zrGED4oI1zSH</property>
-    <property name="acs-username-development" type="string">appc_app_user_dev</property>
-    <property name="acs-password-development" type="string">JgLJ58mwa98wv3W6b5</property>
+   
+    <property name="acs-oauth-secret-development" type="string">GYuPYfOmp2bwHIIXgXPCeHiA0nblqIM7</property>
+    <property name="acs-oauth-key-development" type="string">rGFcYYjapJDWg8p52EPkn8YCjRNss6Hz</property>
+    <property name="acs-api-key-development" type="string">IjPDHHlx981sLtnCBVorYaYVlZ4qkp3R</property>
+   
     <property name="acs-authbase-url-production" type="string">https://secure-identity.cloud.appcelerator.com</property>
     <property name="acs-base-url-production" type="string">https://api.cloud.appcelerator.com</property>
-    <property name="acs-oauth-secret-production" type="string">97I6QlhMSQfwnNuVQZ3UZoYaFzB58aXU</property>
-    <property name="acs-oauth-key-production" type="string">bjHvmRpdDXCVCRF3gcVjPye6mwdOZWXn</property>
-    <property name="acs-api-key-production" type="string">JYgsv5kRjNWnKRH5fD16qiquNBjL2Fcp</property>
-    <property name="acs-username-production" type="string">appc_app_user</property>
-    <property name="acs-password-production" type="string">547Fi1BMoSyyqIZMWl</property>
+   
+    <property name="acs-oauth-secret-production" type="string">u8K6lIoX8Uwggk9dFdG2bXHFTKaZwoKr</property>
+    <property name="acs-oauth-key-production" type="string">Io71ztWdbWIjMvv64PfFpuPBjRg9l6Og</property>
+    <property name="acs-api-key-production" type="string">mLiuGNInFAWfE2ZLwUTIGBnEr59QaF2w</property>
+    
     <property name="appc-org-id" type="string">100000429</property>
     <property name="appc-creator-user-id" type="string">f4e06b94-4ca5-4024-afa5-fb7f70fa302f</property>
-    <property name="com-soasta-touchtest-version" type="string">8244.293.5</property>
-    <property name="com-soasta-touchtest-ios-appId" type="string">565560</property>
 </ti:app>

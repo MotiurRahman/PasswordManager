@@ -1,5 +1,5 @@
 <Alloy>
-    <Window id="settingWin">
+    <Window id="settingWin" extendSafeArea="false">
         <View id="mainView">
             <View id="mainTopBar">
                 <Button backgroundImage="/images/Back.png" id="back" left="5" onClick="back"/>

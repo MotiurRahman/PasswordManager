@@ -3,6 +3,7 @@ var args = arguments[0] || {};
 
 var ad = require('admob');
 
+/*
 var addview;
 if (OS_ANDROID) {
 	addview = ad.addMob_android();
@@ -11,6 +12,7 @@ if (OS_ANDROID) {
 }
 
 $.adView.add(addview); 
+*/
 
 
 function close() {

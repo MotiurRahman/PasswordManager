@@ -77,6 +77,7 @@ refresh();
 //Ti.App.addEventListener('update', refresh);
 Alloy.Events.on('updateMainUI', refresh);
 
+/*
 var ad = require('admob');
 
 var addview;
@@ -87,6 +88,7 @@ if (OS_ANDROID) {
 }
 
 $.adView.add(addview);
+*/
 
 $.elementsList.addEventListener('itemclick', function(e) {
 	var section = $.elementsList.sections[e.sectionIndex];

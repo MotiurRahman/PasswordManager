@@ -1,4 +1,5 @@
 var args = arguments[0] || {};
+/*
 var ad = require('admob');
 var addview;
 if (OS_ANDROID) {
@@ -7,6 +8,7 @@ if (OS_ANDROID) {
 	addview = ad.addMob_iOS();
 }
 $.adView.add(addview);
+*/
 function submit() {
 	var db = require('loginDB');
 	var pass = db.getinfo();
@@ -26,6 +28,9 @@ function submit() {
 							duration : Ti.UI.NOTIFICATION_DURATION_LONG
 						});
 						toast.show();
+						setTimeout(function() {
+							Ti.App._restart();
+						}, 100);
 					} else {
 						var dialog = Ti.UI.createAlertDialog({
 							message : 'Your Password has been changed successfully',

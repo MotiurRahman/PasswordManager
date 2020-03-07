@@ -34,7 +34,9 @@
 }
 '#submit':{
 	borderWidth: 2,
-	borderColor: 'green',
+	borderColor: 'gray',
+	backgroundColor: "#5B96B2",
+	backgroundSelectedColor:"gray",
 	borderRadius: 10,
 	width: 80,
 	height: 50,
@@ -69,7 +71,9 @@
 
 '#submit[formFactor=tablet]': {
 	borderWidth: 2,
-	borderColor: 'green',
+	borderColor: 'gray',
+	backgroundColor: "#5B96B2",
+	backgroundSelectedColor:"gray",
 	borderRadius: 10,
 	width: 150,
 	height: 70

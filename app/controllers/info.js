@@ -103,6 +103,7 @@ refresh();
 //Ti.App.addEventListener('update', refresh);
 Alloy.Events.on('updateMainUI', refresh);
 
+/*
 var ad = require('admob');
 
 var addview;
@@ -113,6 +114,7 @@ if (OS_ANDROID) {
 }
 
 $.adView.add(addview);
+*/
 
 $.elementsList.addEventListener('itemclick', function(e) {
 	var section = $.elementsList.sections[e.sectionIndex];
@@ -128,7 +130,7 @@ $.elementsList.addEventListener('itemclick', function(e) {
 
 	};
 	Alloy.createController('details', data).getView().open({
-		modal : true
+		//modal : true
 	});
 
 });
@@ -155,7 +157,7 @@ $.sideMenu.menuTable.addEventListener('click', function(e) {
 		break;
 	case "settings":
 		Alloy.createController('setting/setting').getView().open({
-			modal : true
+			//modal : true
 		});
 
 		animationView.animat(self, value, function(e) {
@@ -233,7 +235,7 @@ $.sideMenu.menuTable.addEventListener('click', function(e) {
 		break;
 	case "rate":
 		if (OS_ANDROID) {
-			Ti.Platform.openURL("market://details?id=com.bd.PasswordManager");
+			Ti.Platform.openURL("market://details?id=com.bd.PasswordManagerPro");
 		} else {
 			Ti.Platform.openURL("https://itunes.apple.com/us/app/password-security-manager/id1070748246?ls=1&mt=8");
 		}
