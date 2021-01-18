@@ -1,62 +1,63 @@
-"#menuView":{
-	layout: 'vertical',
-	backgroundColor: 'blue'
+"#menuView" : {
+  layout: 'vertical',
+  backgroundColor: 'blue'
 },
-"#menuTopBar":{
-	width: Ti.UI.FILL,
-	height: "60dp",
-	//backgroundColor: '#3D3D3D',
-	backgroundColor: '#5B96B2',
-	//backgroundColor: 'green',
-	layout: 'horizontal'
+
+".tableRow" : {
+  height: '50dp'
 },
-".tableRow":{
-	height: '50dp'
+
+".rowContainer" : {
+  height: '50dp',
+ // layout: 'horizontal',
+  backgroundSelectedColor: "#5B96B2"
 },
-"#rowContainer":{
-	height: '30dp',
-	layout: 'horizontal'
+
+".rowIcon" : {
+  left: 5,
+  width: "20dp",
+  height: "20dp"
 },
-".rowIcon":{
-	left: 5,
-	top: 7,
-	width: "20dp",
-	height: "20dp"
+"#rowAbout" : {
+  backgroundImage: '/images/about.png',
+  bubbleParent: false,
+  touchEnabled: false
 },
-"#rowAbout":{
-	backgroundImage: '/images/about.png'
+"#rowGear" : {
+  backgroundImage: '/images/19-gear.png',
+  bubbleParent: false,
+  touchEnabled: false
 },
-"#rowGear":{
-	backgroundImage: '/images/19-gear.png'
-},
-"#rowRate":{
-	backgroundImage: '/images/rate.png'
+"#rowRate" : {
+  backgroundImage: '/images/rate.png',
+  bubbleParent: false,
+  touchEnabled: false
 }
-"#fbShare":{
-	backgroundImage: '/images/fbicon.png'
+"#fbShare" : {
+  backgroundImage: '/images/fbicon.png'
 }
-"#twiterShare":{
-	backgroundImage: '/images/twicon.png'
+"#twiterShare" : {
+  backgroundImage: '/images/twicon.png'
 }
-"#linkdinShare":{
-	backgroundImage: '/images/Linicon.png'
+"#linkdinShare" : {
+  backgroundImage: '/images/Linicon.png'
 }
-"#whatsappShare":{
-	backgroundImage: '/images/whatsappicon.png'
+"#whatsappShare" : {
+  backgroundImage: '/images/whatsappicon.png'
 }
 
-
-".rowLabel":{
-	top: 7,
-	left: 10,
-	height: "20dp",
-	font:{
-		fontSize: "15dp"
-	},
-	color: "#000"
+".rowLabel" : {
+  left: 40,
+  height: "20dp",
+  font: {
+    fontSize: "15dp"
+  },
+  color: "#000",
+  bubbleParent: false,
+  touchEnabled: false
 },
-".menuTable":{
-	separatorStyle: 'NONE',
-	separatorColor: 'transparent',
-	backgroundColor: '#F2F2F2'
+".menuTable" : {
+  separatorStyle: Titanium.UI.TABLE_VIEW_SEPARATOR_STYLE_NONE,
+  separatorColor: 'transparent',
+  backgroundColor: '#F2F2F2'
 }

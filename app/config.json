@@ -1,5 +1,6 @@
 {
-	"global": {},
+	"global": {"bgBtnColor":"#5B96B2",
+	"bgSelectedColor": "#8e9091"},
 	"env:development": {},
 	"env:test": {},
 	"env:production": {},

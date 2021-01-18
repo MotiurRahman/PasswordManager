@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ti:app xmlns:ti="http://ti.appcelerator.org">
+<?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.bd.PasswordManagerPro</id>
-    <name>PasswordManager</name>
-    <version>3.7</version>
+    <name>Password Manager</name>
+    <version>1.1</version>
     <publisher>motiurrahman</publisher>
     <url>http://motiur.herokuapp.com/</url>
     <description>undefined</description>
@@ -11,7 +10,7 @@
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>d3c1a153-95b5-422e-9777-39ca24174a4a</guid>
+    <guid>d3c1a153-95b6-422e-9777-39ca24174a4a</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <property name="run-on-main-thread" type="bool">true</property>
     <property name="acs-grouped-notification-message" type="string">You have $number$ unread messages.</property>
@@ -58,58 +57,32 @@
             </dict>
         </plist>
     </ios>
+    <!-- android:theme="@style/Theme.NoActionBar" -->
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest>
-            <application android:theme="@style/Theme.NoActionBar">
-                <activity
-                    android:configChanges="keyboardHidden|orientation"
-                    android:label="PasswordManager" android:name=".PasswordmanagerActivity">
-                    <intent-filter>
-                        <action android:name="android.intent.action.MAIN"/>
-                        <category android:name="android.intent.category.LAUNCHER"/>
-                    </intent-filter>
-                </activity>
-            </application>
-            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-            <uses-permission android:name="android.permission.INTERNET"/>
-            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-            <uses-permission android:name="android.permission.BLUETOOTH"/>
-            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-            <uses-permission android:name="android.permission.GET_TASKS"/>
+        <manifest android:versionCode="5">
+            <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29"/>
         </manifest>
     </android>
     <modules>
-        <module platform="android">ti.cloudpush</module>
-        <module platform="iphone">ti.applesignin</module>
         <module platform="commonjs" version="3.2.11">ti.cloud</module>
+        <module platform="android">firebase.cloudmessaging</module>
+        <module platform="android">firebase.core</module>
+        <module platform="android" version="17.1.1">ti.playservices</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
         <target device="ipad">true</target>
         <target device="iphone">true</target>
     </deployment-targets>
-    <sdk-version>8.3.1.GA</sdk-version>
+    <sdk-version>9.3.0.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
     <property name="android.javac.maxmemory" type="string">1024M</property>
     <property name="android.dx.maxmemory" type="string">2048M</property>
     <property name="appc-app-id" type="string">5a02a73a2836cd7bad44a43e</property>
-    
-    <property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property>
-    <property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property>
-   
-    <property name="acs-oauth-secret-development" type="string">GYuPYfOmp2bwHIIXgXPCeHiA0nblqIM7</property>
-    <property name="acs-oauth-key-development" type="string">rGFcYYjapJDWg8p52EPkn8YCjRNss6Hz</property>
-    <property name="acs-api-key-development" type="string">IjPDHHlx981sLtnCBVorYaYVlZ4qkp3R</property>
-   
-    <property name="acs-authbase-url-production" type="string">https://secure-identity.cloud.appcelerator.com</property>
-    <property name="acs-base-url-production" type="string">https://api.cloud.appcelerator.com</property>
-   
-    <property name="acs-oauth-secret-production" type="string">u8K6lIoX8Uwggk9dFdG2bXHFTKaZwoKr</property>
-    <property name="acs-oauth-key-production" type="string">Io71ztWdbWIjMvv64PfFpuPBjRg9l6Og</property>
-    <property name="acs-api-key-production" type="string">mLiuGNInFAWfE2ZLwUTIGBnEr59QaF2w</property>
-    
+    <property name="acs-api-key-development" type="string">rifVBM189E3lQvweVZ8eSyMoS9JkOt8Q</property>
+    <property name="acs-api-key-production" type="string">HHC68UZpjLoIgNZaNiwnfAl7C5NldDsp</property>
     <property name="appc-org-id" type="string">100000429</property>
     <property name="appc-creator-user-id" type="string">f4e06b94-4ca5-4024-afa5-fb7f70fa302f</property>
 </ti:app>

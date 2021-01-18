@@ -23,6 +23,11 @@
 	horizontalWrap: false
 },
 
+"#contentView":{
+	left:"10dp",
+	right:"10dp"
+}
+
 
 
 
@@ -36,9 +41,9 @@
 },
 "TextField":{
 	color: '#000',
-	left: 10,
-	right: 10,
-	height: 40,
+	left: 15,
+	right: 15,
+	height: 45,
 	backgroundColor: '#fff'
 }
 
@@ -73,8 +78,12 @@
 	borderWidth: 2,
 	borderColor: 'green',
 	borderRadius: 10,
+	backgroundColor: Alloy.CFG.bgBtnColor,
+	backgroundSelectedColor: Alloy.CFG.bgSelectedColor,
 	width: 80,
-	height: 50
+	height: 50,
+	top:"20",  
+	color:"#fff" 
 },
 
 
@@ -82,7 +91,11 @@
 	borderWidth: 2,
 	borderColor: 'green',
 	borderRadius: 10,
+	backgroundColor: Alloy.CFG.bgBtnColor,
+	backgroundSelectedColor: Alloy.CFG.bgSelectedColor,
 	width: 150,
-	height: 70
+	height: 70,
+	top:"20",  
+	color:"#fff" 
 }
 

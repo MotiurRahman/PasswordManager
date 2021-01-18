@@ -1,23 +1,27 @@
 <Alloy>
-	<Window class="container" id="win" extendSafeArea="false">
+  <Window class="container" id="win" title="Password Manager">
+    <ActionBar platform="android" displayHomeAsUp="true" onHomeIconItemSelected="onClickDrawer"/>
+    <Menu id="menu" platform="android">
+      <!-- Cannot specify node text. Use attributes only. -->
+      <MenuItem id="addItem" title="Add" onClick="Add"/>
+    </Menu>
 
-		<!-- <Require type="widget" src="com.alcoapps.drawermenu" id="drawermenu"/> -->
-
-		<Require type="view" src="menuview" id="sideMenu"></Require>
-		<View id="mainView" backgroundColor="gray" zIndex="5" >
-			<View id="mainTopBar" top="0">
-				<View id="menuButtonLeft" />
-				<Label id="name">Password Manager</Label>>
-				<View id="menuButtonRight"/>
-			</View>
-			<View id="listView" zIndex="1">
-				<ListView id="elementsList" >
-					<SearchBar barColor="#000" />
-					<ListSection name="elements" />
-				</ListView>
-			</View>
-			<!-- <View id='adView' width="Ti.UI.FILL" height="60" bottom="0" zIndex="2"/> -->
-		</View>
-
-	</Window>
+    <DrawerLayout id="drawer" platform="android" leftWidth="200dp">
+      <LeftView width="150dp">
+        <Require type="view" src="menuview" id="sideMenu"></Require>
+      </LeftView>
+      <CenterView>
+        <View id="mainView">
+          <!-- <View id="mainTopBar" top="0"> <View id="menuButtonLeft" /> <Label id="name">Password Manager</Label>> <View id="menuButtonRight"/> </View> -->
+          <View id="listView" zIndex="1">
+            <ListView id="elementsList">
+              <SearchBar id="searchBar" barColor="#000"/>
+              <ListSection name="elements"/>
+            </ListView>
+          </View>
+          <!-- <View id='adView' width="Ti.UI.FILL" height="60" bottom="0" zIndex="2"/> -->
+        </View>
+      </CenterView>
+    </DrawerLayout>
+  </Window>
 </Alloy>

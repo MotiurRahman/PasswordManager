@@ -1,0 +1,26 @@
+<Alloy>
+  <Window class="container">
+    <ActionBar platform="android" displayHomeAsUp="true" onHomeIconItemSelected="onClickDrawer"/>
+    <DrawerLayout id="drawer" platform="android">
+      <LeftView>
+       <Require type="view" src="menuview.xml"/>
+      </LeftView>
+      <CenterView>
+        <View id="mainView" backgroundColor="gray">
+          <!-- <View id="mainTopBar" top="0">
+            <View id="menuButtonLeft"/>
+            <Label id="name">Password Manager</Label>>
+            <View id="menuButtonRight"/>
+          </View> -->
+          <View id="listView" zIndex="1">
+            <ListView id="elementsList">
+              <SearchBar barColor="#000"/>
+              <ListSection name="elements"/>
+            </ListView>
+          </View>
+          <!-- <View id='adView' width="Ti.UI.FILL" height="60" bottom="0" zIndex="2"/> -->
+        </View>
+      </CenterView>
+    </DrawerLayout>
+  </Window>
+</Alloy>

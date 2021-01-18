@@ -16,20 +16,20 @@ $.adView.add(addview);
 
 function save() {
 	var db = require('db');
-	if ($.txt_title.getValue() == '' || $.txt_pass.getValue() == '') {
+	if ($.txt_title.value == '' || $.txt_pass.value == '') {
 
 		alert('Pleae fill up minimum requirement');
 	} else {
 
-		db.add($.txt_title.getValue(), $.txt_email.getValue(), $.txt_pass.getValue(), $.txt_account.getValue(), $.txt_pin.getValue(), $.txt_url.getValue(), function(_callBacl) {
+		db.add($.txt_title.value, $.txt_email.value, $.txt_pass.value, $.txt_account.value, $.txt_pin.value, $.txt_url.value, function(_callBacl) {
 			if (_callBacl == 'success') {
 				//alert(_callBacl);
-				$.txt_title.setValue('');
-				$.txt_email.setValue('');
-				$.txt_pass.setValue('');
-				$.txt_url.setValue('');
-				$.txt_account.setValue('');
-				$.txt_pin.setValue('');
+				$.txt_title.value = '';
+				$.txt_email.value = '';
+				$.txt_pass.value = '';
+				$.txt_url.value = '';
+				$.txt_account.value = '';
+				$.txt_pin.value = '';
 				//Ti.App.fireEvent('update');
 				Alloy.Events.trigger('updateMainUI');
 				// $.genWin.close({
@@ -52,6 +52,8 @@ function back() {
 	// transition : Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
 	// });
 	$.genWin.close();
+	$.off();
+	$.destroy();
 }
 
 //

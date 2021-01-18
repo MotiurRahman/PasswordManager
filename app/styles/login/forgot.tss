@@ -1,59 +1,85 @@
-"#mainView": {
-	"layout": "vertical",
-	"backgroundColor": "#000"
+"#mainView" : {
+  "layout": "vertical",
+  "backgroundColor": "#000"
 },
-"#mainTopBar": {
+"#mainTopBar" : {
+  "width": Ti.UI.FILL,
+  "height": "60dp",
+  "backgroundColor": "#5B96B2"
+},
+"#mainTopBar[formFactor=tablet]" : {
+  "width": Ti.UI.FILL,
+  "height": "100",
+  "backgroundColor": "#5B96B2"
+},
+"Label" : {
+  "color": "#fff",
+  "width": Ti.UI.SIZE,
+  "height": Ti.UI.SIZE,
+  "font": {
+    fontSize: '20dp'
+  }
+},
+"TextField" : {
+  "color": "#000",
+  "left": 15,
+  "right": 15,
+  "height": 45,
+  "backgroundColor": "#fff"
+},
+"#submit" : {
+  borderWidth: 2,
+  borderColor: "green",
+  backgroundColor: Alloy.CFG.bgBtnColor,
+	backgroundSelectedColor: Alloy.CFG.bgSelectedColor,
+  borderRadius: 10,
+  width: 80,
+  height: 50
+},
+"#back" : {
+  "width": 50,
+  "height": 30
+},
+"#back[formFactor=tablet]" : {
+  "width": 100,
+  "height": 60
+},
+"Label[formFactor=tablet]" : {
+  "font": {
+    fontWeight: 'bold',
+    fontSize: '32dp'
+  },
+  "color": "#fff"
+},
+"TextField[formFactor=tablet]" : {
+  "height": 80,
+  "font": {
+    fontSize: '30'
+  }
+},
+"#submit[formFactor=tablet]" : {
+  "borderWidth": 2,
+  "borderColor": "green",
+  "borderRadius": 10,
+  backgroundColor: Alloy.CFG.bgBtnColor,
+	backgroundSelectedColor: Alloy.CFG.bgSelectedColor,
+  "width": 150,
+  "height": 70
+},
+"#txt_email" : {},
+
+"#vwOverlayCont": {
+	"width": Titanium.UI.FILL,
+	"height": Titanium.UI.FILL,
+	"visible": false
+},
+"#overlayIndicator": {
+	"style": Titanium.UI.ActivityIndicatorStyle.BIG,
+	"indicatorColor": "#FFF"
+},
+"#vwOverlay": {
 	"width": Ti.UI.FILL,
-	"height": "60dp",
-	"backgroundColor": "#5B96B2"
+	"height": Ti.UI.FILL,
+	"backgroundColor": "#000",
+	"opacity": 0.6
 },
-"#mainTopBar[formFactor=tablet]": {
-	"width": Ti.UI.FILL,
-	"height": "100",
-	"backgroundColor": "#5B96B2"
-},
-"Label": {
-	"color": "#fff",
-	"width": Ti.UI.SIZE,
-	"height": Ti.UI.SIZE,
-	"font": {fontSize:'20dp'}
-},
-"TextField": {
-	"color": "#000",
-	"left": 10,
-	"right": 10,
-	"height": 40,
-	"backgroundColor": "#fff"
-},
-"#submit": {
-	"borderWidth": 2,
-	"borderColor": "green",
-	"borderRadius": 10,
-	"width": 80,
-	"height": 50,
-},
-"#back": {
-	"width": 50,
-	"height": 30
-},
-"#back[formFactor=tablet]": {
-	"width": 100,
-	"height": 60
-},
-"Label[formFactor=tablet]": {
-	"font": {fontWeight:'bold',fontSize:'32dp'},
-	"color": "#fff"
-},
-"TextField[formFactor=tablet]": {
-	"height": 80,
-	"font": {fontSize:'30'}
-},
-"#submit[formFactor=tablet]": {
-	"borderWidth": 2,
-	"borderColor": "green",
-	"borderRadius": 10,
-	"width": 150,
-	"height": 70
-},
-"#txt_email": {
-}

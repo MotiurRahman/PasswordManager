@@ -1,6 +1,6 @@
 <Alloy>
 	<Window class="container" title="Password Details" id="detailWin" extendSafeArea="false">
-		<ScrollView bottom="130">
+		<ScrollView bottom="130" scrollType="vertical">
 			<View  layout="vertical" height='500' width="Ti.UI.FILL">
 				<Label id="title" top="20"></Label>
 				<Label id="email" top="10"></Label>

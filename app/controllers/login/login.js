@@ -4,7 +4,7 @@ function save() {
 	var db = require('loginDB');
 	function checkEmail() {
 
-		var email = $.txt_email.getValue();
+		var email = $.txt_email.value;
 		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
 		if (!filter.test(email)) {
@@ -25,7 +25,7 @@ function save() {
 		}
 	}
 
-	if ($.txt_newPass.getValue() == '' || $.txt_email.getValue() == '' || $.re_pass.getValue() == '') {
+	if ($.txt_newPass.value == '' || $.txt_email.value == '' || $.re_pass.value == '') {
 
 		if (OS_ANDROID) {
 			var toast = Ti.UI.createNotification({
@@ -39,15 +39,15 @@ function save() {
 
 	} else {
 
-		if ($.txt_newPass.getValue() == $.re_pass.getValue()) {
+		if ($.txt_newPass.value== $.re_pass.value) {
 
 			if (checkEmail() == true) {
 
-				db.add($.txt_newPass.getValue(), $.txt_email.getValue(), function(e) {
+				db.add($.txt_newPass.value, $.txt_email.value, function(e) {
 					if (e == 'success') {
-						$.txt_newPass.setValue("");
-						$.re_pass.setValue("");
-						$.txt_email.getValue("");
+						$.txt_newPass.valu = "";
+						$.re_pass.value = "";
+						$.txt_email.value = "";
 
 						if (OS_ANDROID) {
 							var toast = Ti.UI.createNotification({
@@ -85,4 +85,6 @@ function save() {
 
 function back() {
 	$.loginWin.close();
+	$.off();
+	$.destroy();
 }

@@ -15,12 +15,12 @@ function submit() {
 	if (pass.length >= 1) {
 		var i = 0;
 		for (; ; ) {
-			if ($.cur_pass.getValue() == pass[i].pass) {
-				if ($.new_pass.getValue() == $.re_pass.getValue()) {
+			if ($.cur_pass.value == pass[i].pass) {
+				if ($.new_pass.value == $.re_pass.value) {
 					db.updatePass($.new_pass.getValue(), pass[i].id);
-					$.cur_pass.setValue("");
-					$.new_pass.setValue("");
-					$.re_pass.setValue("");
+					$.cur_pass.value = "";
+					$.new_pass.value = "";
+					$.re_pass.value = "";
 					$.settingWin.close();
 					if (OS_ANDROID) {
 						var toast = Ti.UI.createNotification({
@@ -75,4 +75,6 @@ function submit() {
 
 function back() {
 	$.settingWin.close();
+	$.off();
+	$.destroy();
 }

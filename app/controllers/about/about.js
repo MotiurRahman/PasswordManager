@@ -1,7 +1,7 @@
 var args = arguments[0] || {};
 
 
-var ad = require('admob');
+//var ad = require('admob');
 
 /*
 var addview;

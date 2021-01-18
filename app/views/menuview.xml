@@ -1,15 +1,15 @@
 <Alloy>
-	<View id="menuView" zIndex="3">
+	<View id="menuView">
 		<!-- <View id="menuTopBar"/> -->
 		<TableView class="menuTable" id="menuTable">
 			<TableViewRow class="tableRow" id="about">
-				<View id="rowContainer">
+				<View class="rowContainer">
 					<View id="rowAbout" class="rowIcon"/>
 					<Label id="rowLabel" class="rowLabel">About</Label>
 				</View>
 			</TableViewRow>
 			<TableViewRow class="tableRow" id="settings">
-				<View id="rowContainer">
+				<View class="rowContainer">
 					<View id="rowGear" class="rowIcon"/>
 					<Label id="rowLabel" class="rowLabel">Settings</Label>
 				</View>
@@ -39,7 +39,7 @@
 				</View>
 			</TableViewRow> -->
 			<TableViewRow class="tableRow" id="rate">
-				<View id="rowContainer">
+				<View class="rowContainer">
 					<View id="rowRate" class="rowIcon"/>
 					<Label id="rowLabel" class="rowLabel">Rate This App</Label>
 				</View>

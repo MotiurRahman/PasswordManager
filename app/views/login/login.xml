@@ -1,19 +1,19 @@
 <Alloy>
-	<Window id = "loginWin" extendSafeArea="false">
+	<Window id = "loginWin" extendSafeArea="false" theme="Theme.AppCompat.NoTitleBar">
 		<View id = "mainView">
 			<View id="mainTopBar">
 				<Button id="back" left="5" onClick="back" backgroundImage="/images/Back.png"></Button>
 				<Label color="#fff" >Create Password</Label>
 			</View>
 			<ScrollView id="scroll">
-				<View layout="vertical">
+				<View layout="vertical" id="contentView">
 					<Label top="10" left="10">New Password</Label>
 					<TextField id= 'txt_newPass' top="10" passwordMask="true"></TextField>
 					<Label top="10" left="10">Re Password</Label>
 					<TextField id= 're_pass' top="10" passwordMask="true"></TextField>
 					<Label top="10" left="10">Email:Importent for Retriving Password</Label>
 					<TextField id= 'txt_email' top="10" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL" hintText="Make sure twice"></TextField>
-					<Button id="submit" title="Submit" top="20"  color="#fff" onClick="save">Submit</Button>
+					<Button id="submit" title="Submit" onClick="save">Submit</Button>
 				</View>
 			</ScrollView>
 		</View>
