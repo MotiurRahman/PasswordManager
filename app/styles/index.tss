@@ -57,3 +57,25 @@
 },
 "#forgot": {
 }
+
+'Button[formFactor=tablet]': {
+	borderWidth: 2,
+	borderColor: 'gray',
+	borderColor: '#fff',
+	backgroundColor: "#000",
+	backgroundSelectedColor: "#fff",
+	width: 100,
+	color: '#fff',
+	height: 70
+}
+
+'Button': {
+	borderWidth: 2,
+	borderColor: '#fff',
+	backgroundColor: "#000",
+	backgroundSelectedColor: "#fff",
+	borderRadius: 25,
+	color: '#fff',
+	width: 80,
+	height: 45
+}

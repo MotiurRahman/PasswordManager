@@ -14,6 +14,7 @@
 					<Label id="rowLabel" class="rowLabel">Settings</Label>
 				</View>
 			</TableViewRow>
+
 			<!-- <TableViewRow class="tableRow" id="fb">
 				<View id="rowContainer">
 					<View id="fbShare" class="rowIcon"/>
@@ -42,6 +43,12 @@
 				<View class="rowContainer">
 					<View id="rowRate" class="rowIcon"/>
 					<Label id="rowLabel" class="rowLabel">Rate This App</Label>
+				</View>
+			</TableViewRow>
+			<TableViewRow class="tableRow" id="logout">
+				<View class="rowContainer">
+					<View id="rowLogout" class="rowIcon"/>
+					<Label id="rowLabel" class="rowLabel">Logout</Label>
 				</View>
 			</TableViewRow>
 		</TableView>

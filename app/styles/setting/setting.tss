@@ -34,12 +34,12 @@
 }
 '#submit':{
 	borderWidth: 2,
-	borderColor: 'gray',
-	backgroundColor: "#5B96B2",
-	backgroundSelectedColor:"gray",
-	borderRadius: 10,
+	borderColor: '#fff',
+	backgroundColor: "#000",
+	backgroundSelectedColor: "#fff",
+	borderRadius: 25,
 	width: 80,
-	height: 50,
+	height: 45,
 	color:'#fff'
 },
 
@@ -71,10 +71,10 @@
 
 '#submit[formFactor=tablet]': {
 	borderWidth: 2,
-	borderColor: 'gray',
-	backgroundColor: "#5B96B2",
-	backgroundSelectedColor:"gray",
-	borderRadius: 10,
+	borderColor: '#fff',
+	backgroundColor: "#000",
+	backgroundSelectedColor: "#fff",
+	borderRadius: 25,
 	width: 150,
 	height: 70
 }

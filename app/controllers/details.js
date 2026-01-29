@@ -15,12 +15,13 @@ $.adView.add(addview);
 
 //alert("Title:"+args.title);
 
-$.title.text = "Title: " + args.title;
-$.email.text = "Email: " + args.email;
-$.pass.text = "Password: " + args.pass;
-$.site.text = "URL:" + "https://" + args.url;
-$.account.text = "Account: " + args.account;
-$.pin.text = "Pin: " + args.pin;
+$.title.text = args.title || "Details";
+$.desc.text = args.desc || "-";
+$.email.text = args.email || "-";
+$.pass.text = args.pass || "-";
+$.account.text = args.account || "-";
+$.pin.text = args.pin || "-";
+$.site.text = "https://" + (args.url || "");
 
 var mailURL = "https://" + args.url;
 
@@ -38,19 +39,16 @@ function update() {
   $.detailWin.close();
   $.off();
   $.destroy();
- 
-  Alloy.createController("update", args).getView().open();
 
+  Alloy.createController("update", args).getView().open();
 }
 
 function deleteBtn() {
   var db = require("db");
   var dialog = Ti.UI.createAlertDialog({
-    buttonNames: [
-      "Confirm", "Cancel"
-    ],
+    buttonNames: ["Confirm", "Cancel"],
     message: "Would you like to delete the file?",
-    title: "Delete"
+    title: "Delete",
   });
   dialog.addEventListener("click", function (e) {
     if (e.index === 0) {

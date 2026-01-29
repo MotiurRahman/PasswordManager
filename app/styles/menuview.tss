@@ -33,6 +33,14 @@
   bubbleParent: false,
   touchEnabled: false
 }
+
+"#rowLogout" : {
+  backgroundImage: '/images/logout.ico',
+  bubbleParent: false,
+  touchEnabled: false
+}
+
+
 "#fbShare" : {
   backgroundImage: '/images/fbicon.png'
 }

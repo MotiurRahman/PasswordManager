@@ -1,25 +1,35 @@
 <Alloy>
-    <Window id="updateWin" layout="vertical" theme="Theme.AppCompat.NoTitleBar" extendSafeArea="false">
-        <View id="mainTopBar">
-            <Button backgroundImage="/images/Back.png" id="back" left="5" onClick="back"/>
-            <Label color="#fff">Update Information</Label>&gt;
-		</View>
+    <Window id="updateWin" layout="vertical" title="Update Information" extendSafeArea="false">
+
+        <ActionBar platform="android" displayHomeAsUp="true" onHomeIconItemSelected="back" />
+
         <ScrollView scrollType="vertical">
             <View backgroundColor="#000" class="container" layout="vertical" height="Ti.UI.SIZE" width="Ti.UI.FILL">
+
                 <Label id="title_name" left="20" top="10">Title Name</Label>
-                <TextField id="txt_title" top="10"/>
-                <Label id="Email" left="20" top="10">Email</Label>
-                <TextField id="txt_email" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL" top="10"/>
-                <Label id="pass" left="20" top="10">Password</Label>
-                <TextField id="txt_pass" top="10"/>
-                <Label id="acount" left="20" top="10">Account Number</Label>
-                <TextField id="txt_account" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD" top="10"/>
-                <Label id="pin" left="20" top="10">Pin Number</Label>
-                <TextField id="txt_pin" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD" top="10"/>
-                <Label id="url" left="20" top="10">Site URL</Label>
-                <TextField id="txt_url" keyboardType="Titanium.UI.KEYBOARD_TYPE_URL" top="10"/>
-                <Button color="#fff" id="updateID" onClick="update" title="Update" top="20"/>&gt;
-				<View height="60" id="adView" width="Ti.UI.FILL"/>
+                <TextField id="txt_title" top="10" hintText="Enter title name"/>
+
+                <Label id="desc" left="20" top="10">Description</Label>
+                <TextArea id="txt_desc" top="10" hintText="Enter description"/>
+
+                <Label left="20" top="10">Email</Label>
+                <TextField id="txt_email" keyboardType="Titanium.UI.KEYBOARD_TYPE_EMAIL" top="10" hintText="example@email.com"/>
+
+                <Label left="20" top="10">Password</Label>
+                <TextField id="txt_pass" top="10" passwordMask="true" hintText="Enter password"/>
+
+                <Label left="20" top="10">Account Number</Label>
+                <TextField id="txt_account" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD" top="10" hintText="Enter account number"/>
+
+                <Label left="20" top="10">Pin Number</Label>
+                <TextField id="txt_pin" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD" top="10" hintText="Enter pin number"/>
+
+                <Label left="20" top="10">Site URL</Label>
+                <TextField id="txt_url" keyboardType="Titanium.UI.KEYBOARD_TYPE_URL" top="10" hintText="example.com"/>
+
+                <Button id="updateID" title="Update" color="#fff" top="20" onClick="update"/>
+
+                <View height="60" id="adView" width="Ti.UI.FILL"/>
             </View>
         </ScrollView>
     </Window>

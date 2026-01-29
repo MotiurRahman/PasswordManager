@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.bd.PasswordManagerPro</id>
     <name>Password Manager</name>
     <version>1.1</version>
@@ -60,29 +61,22 @@
     <!-- android:theme="@style/Theme.NoActionBar" -->
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest android:versionCode="5">
-            <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29"/>
+            <application android:theme="@style/Theme.Titanium.Light"/>
+            <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="35"/>
         </manifest>
     </android>
     <modules>
-        <module platform="commonjs" version="3.2.11">ti.cloud</module>
         <module platform="android">firebase.cloudmessaging</module>
         <module platform="android">firebase.core</module>
-        <module platform="android" version="17.1.1">ti.playservices</module>
+        <module platform="android">ti.playservices</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
         <target device="ipad">true</target>
         <target device="iphone">true</target>
     </deployment-targets>
-    <sdk-version>9.3.0.GA</sdk-version>
+    <sdk-version>13.0.1.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
-    <property name="android.javac.maxmemory" type="string">1024M</property>
-    <property name="android.dx.maxmemory" type="string">2048M</property>
-    <property name="appc-app-id" type="string">5a02a73a2836cd7bad44a43e</property>
-    <property name="acs-api-key-development" type="string">rifVBM189E3lQvweVZ8eSyMoS9JkOt8Q</property>
-    <property name="acs-api-key-production" type="string">HHC68UZpjLoIgNZaNiwnfAl7C5NldDsp</property>
-    <property name="appc-org-id" type="string">100000429</property>
-    <property name="appc-creator-user-id" type="string">f4e06b94-4ca5-4024-afa5-fb7f70fa302f</property>
 </ti:app>

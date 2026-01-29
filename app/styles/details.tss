@@ -1,47 +1,70 @@
+".container": { backgroundColor: "#000" }
 
-".container": {
-	backgroundColor: '#000'
+"#sv":{
+	scrollType:"vertical", 
+	top: 10, 
+	bottom: 100, 
+	showVerticalScrollIndicator:true 
 }
 
-"Label":{
-	color: '#fff',
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	font: {
-		fontSize: 20
-	},
-	left: 20
-},
-
-"Label[formFactor=tablet]":{
-	color: '#fff',
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	font: {
-		fontSize: 30
-	},
-	left: 20
-},
-
-'Button[formFactor=tablet]': {
-	borderWidth: 2,
-	borderColor: 'gray',
-	borderRadius: 10,
-	backgroundColor: "#5B96B2",
-	backgroundSelectedColor: "gray",
-	width: 150,
-	color: '#fff',
-	height: 70
+"#card": {
+  width: Ti.UI.FILL, height: Ti.UI.SIZE,
+   backgroundColor: "#111",
+  borderRadius: 16,
+  top: 20, left: 16, right: 16,
+  padding: 16,
+  layout: "vertical"
 }
 
-'Button': {
-	borderWidth: 2,
-	borderColor: 'gray',
-	backgroundColor: "#5B96B2",
-	backgroundSelectedColor: "gray",
-	borderRadius: 10,
-	color: '#fff',
-	width: 80,
-	height: 50
+".header": {
+  color: "#fff",
+  font: { fontSize: 22, fontWeight: "bold" },
+  left: 0, width: Ti.UI.FILL,
+  bottom: 14
 }
 
+".row": {
+  width: Ti.UI.FILL,
+  height: Ti.UI.SIZE,
+  layout: "vertical",
+  top: 12
+}
+
+".fieldLabel": {
+  color: "#9aa0a6",
+  font: { fontSize: 12, fontWeight: "bold" },
+  left: 0, width: Ti.UI.FILL,
+  height: Ti.UI.SIZE
+}
+
+".fieldValue": {
+  color: "#fff",
+  font: { fontSize: 16 },
+  left: 0, top: 4,
+  width: Ti.UI.FILL,
+  height: Ti.UI.SIZE,
+  wordWrap: true
+}
+
+".fieldLink": {
+  color: "#4da3ff",
+  font: { fontSize: 16 },
+  left: 0, top: 4,
+  width: Ti.UI.FILL,
+  height: Ti.UI.SIZE,
+  wordWrap: true,
+  textDecoration: Ti.UI.TEXT_DECORATION_UNDERLINE
+}
+
+".btnRow": {
+  bottom: 18,
+  height: 80,
+  width: Ti.UI.FILL,
+  horizontalWrap: false,
+  center: { x: "50%" }
+}
+
+
+".btnPrimary": { backgroundColor: "#1f6feb", backgroundSelectedColor:"#fff", color: "#fff", borderRadius: 25, height: 44, width: 90,right:10 }
+".btnDanger":  { backgroundColor: "#d73a49",  backgroundSelectedColor:"#fff", color: "#fff", borderRadius: 25, height: 44, width: 90, left:10 }
+".btnGhost":   { backgroundColor: "#222",  backgroundSelectedColor:"#fff",    color: "#fff", borderRadius: 25, height: 44, width: 90}

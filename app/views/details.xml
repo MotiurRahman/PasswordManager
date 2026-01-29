@@ -1,23 +1,58 @@
 <Alloy>
-	<Window class="container" title="Password Details" id="detailWin" extendSafeArea="false">
-		<ScrollView bottom="130" scrollType="vertical">
-			<View  layout="vertical" height='500' width="Ti.UI.FILL">
-				<Label id="title" top="20"></Label>
-				<Label id="email" top="10"></Label>
-				<Label id="pass" top="10"></Label>
-				<Label id="account" top="10"></Label>
-				<Label id="pin" top="10"></Label>
-				<Label id="site" top="10" onClick="openURL" autoLink="Titanium.UI.AUTOLINK_ALL"></Label>
+	<Window id="detailWin" class="container" title="Details">
+
+		<ScrollView id="sv">
+			<!-- wrapper -->
+
+
+			<View id="card" layout="vertical" width="Ti.UI.FILL" height="Ti.UI.SIZE">
+
+				<Label id="title" class="header"/>
+
+				<View class="row">
+					<Label class="fieldLabel" text="Description"/>
+					<Label id="desc" class="fieldValue"/>
+				</View>
+
+				<View class="row">
+					<Label class="fieldLabel" text="Email"/>
+					<Label id="email" class="fieldValue"/>
+				</View>
+
+				<View class="row">
+					<Label class="fieldLabel" text="Password"/>
+					<Label id="pass" class="fieldValue"/>
+				</View>
+
+				<View class="row">
+					<Label class="fieldLabel" text="Account"/>
+					<Label id="account" class="fieldValue"/>
+				</View>
+
+				<View class="row">
+					<Label class="fieldLabel" text="Pin"/>
+					<Label id="pin" class="fieldValue"/>
+				</View>
+
+				<View class="row">
+					<Label class="fieldLabel" text="Website"/>
+					<Label id="site" class="fieldLink" onClick="openURL"/>
+				</View>
+
+
+				<View height="60" id="adView" width="Ti.UI.FILL"/>
 			</View>
+
+
 		</ScrollView>
-		<View  width="Ti.UI.Fill" height="Ti.UI.SIZE" bottom="0" layout="vertical">
-			<!-- <View id="adView" width="Ti.UI.FILL" height="60"></View> -->
-			<View height="Ti.UI.SIZE" width="Ti.UI.FILL">
-				<Button  title="Delete" onClick="deleteBtn" left="5"></Button>
-				<Button  title="close" onClick="close"></Button>
-				<Button  title="Update" onClick="update" right="5"></Button>
-			</View>
+
+		<View class="btnRow">
+
+			<Button title="Delete" class="btnDanger" onClick="deleteBtn"/>
+			<Button title="Close" class="btnGhost" onClick="close"/>
+			<Button title="Update" class="btnPrimary" onClick="update"/>
 		</View>
+
 
 	</Window>
 </Alloy>

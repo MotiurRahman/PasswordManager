@@ -18,7 +18,7 @@
 
 "#addItem" : {
   showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS,
-  icon: "/images/add_icon.png"
+  icon: "/images/add2.png"
 }
 
 "#mainView" : {
@@ -27,5 +27,6 @@
 },
 
 "#searchBar" : {
-  height: "55dp"
+  height: "55dp",
+  color: "#fff"
 }

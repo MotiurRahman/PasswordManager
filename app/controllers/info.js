@@ -3,11 +3,8 @@ function onClickDrawer(e) {
 }
 
 function Add() {
-  if (OS_ANDROID) {
-    Alloy.createController("generalPass").getView().open();
-  } else {
-    Alloy.createController("generalPass").getView().open({transition: Ti.UI.iOS.AnimationStyle.FLIP_FROM_LEFT});
-  }
+  var generalPassWin = Alloy.createController("generalPass").getView();
+  $.win1.openWindow(generalPassWin);
 }
 
 var animationView = require("/animation");
@@ -54,7 +51,9 @@ function refresh() {
 
     //considering tablet to have one dimension over 900px - this is imperfect, so you should feel free to decide
     //yourself what you consider a tablet form factor for android
-    var isTablet = osname === "ipad" || (osname === "android" && (width > 899 || height > 899));
+    var isTablet =
+      osname === "ipad" ||
+      (osname === "android" && (width > 899 || height > 899));
 
     var rowHeight;
 
@@ -73,6 +72,7 @@ function refresh() {
       properties: {
         id: data[i].id,
         title: data[i].title,
+        desc: data[i].desc,
         email: data[i].email,
         pass: data[i].pass,
         account: data[i].account,
@@ -80,33 +80,32 @@ function refresh() {
         url: data[i].url,
         searchableText: data[i].title,
         font: {
-          fontSize: 25
+          fontSize: 25,
         },
         // height : heightValue(),
         backgroundGradient: {
           type: "linear",
           startPoint: {
             x: "0%",
-            y: "0%"
+            y: "0%",
           },
           endPoint: {
             x: "0%",
-            y: "100%"
+            y: "100%",
           },
           colors: [
             {
               color: "#0091EA",
-              offset: 0.0
-            }, {
+              offset: 0.0,
+            },
+            {
               color: "#0277BD",
-              offset: 0.5
-            }
-          ]
+              offset: 0.5,
+            },
+          ],
         },
-        color: OS_ANDROID
-          ? "#fff"
-          : "#000"
-      }
+        color: OS_ANDROID ? "#fff" : "#000",
+      },
     });
   }
 
@@ -137,15 +136,15 @@ $.elementsList.addEventListener("itemclick", function (e) {
   var data = {
     id: item.properties.id,
     title: item.properties.title,
+    desc: item.properties.desc,
     pass: item.properties.pass,
     email: item.properties.email,
     account: item.properties.account,
     pin: item.properties.pin,
-    url: item.properties.url
+    url: item.properties.url,
   };
-  Alloy.createController("details", data).getView().open({
-    //modal : true
-  });
+  var detailsWin = Alloy.createController("details", data).getView();
+  $.win1.openWindow(detailsWin);
 });
 
 var menuView = Alloy.createController("menuview");
@@ -156,23 +155,29 @@ $.sideMenu.menuTable.addEventListener("click", function (e) {
 
   switch (e.rowData.id) {
     case "about":
-      Alloy.createController("about/about").getView().open({
-        //modal : true
-      });
+      var aboutPage = Alloy.createController("about/about").getView();
+      $.win1.openWindow(aboutPage);
       $.drawer.toggleLeft();
 
       break;
     case "settings":
-      Alloy.createController("setting/setting").getView().open({
-        //modal : true
-      });
+      var setting = Alloy.createController("setting/setting").getView();
+      $.win1.openWindow(setting);
       $.drawer.toggleLeft();
+
+      break;
+    case "logout":
+      Ti.App.Properties.setBool("isLoggedIn", false);
+      Alloy.createController("index").getView().open();
 
       break;
     case "fb":
       if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
         if (OS_ANDROID) {
-          var toast = Ti.UI.createNotification({message: "Please connect to the internet!", duration: Ti.UI.NOTIFICATION_DURATION_LONG});
+          var toast = Ti.UI.createNotification({
+            message: "Please connect to the internet!",
+            duration: Ti.UI.NOTIFICATION_DURATION_LONG,
+          });
           toast.show();
         } else {
           alert("Please connect to the internet!");
@@ -184,18 +189,21 @@ $.sideMenu.menuTable.addEventListener("click", function (e) {
 
       break;
     case "twitter":
-      Alloy.createController("social/twitter").getView().open({modal: true});
-     
+      Alloy.createController("social/twitter").getView().open({ modal: true });
+
       break;
     case "linkdin":
-      Alloy.createController("social/linkdin").getView().open({modal: true});
-    
+      Alloy.createController("social/linkdin").getView().open({ modal: true });
+
       break;
 
     case "whatsapp":
       if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
         if (OS_ANDROID) {
-          var toast = Ti.UI.createNotification({message: "Please connect to the internet!", duration: Ti.UI.NOTIFICATION_DURATION_LONG});
+          var toast = Ti.UI.createNotification({
+            message: "Please connect to the internet!",
+            duration: Ti.UI.NOTIFICATION_DURATION_LONG,
+          });
           toast.show();
         } else {
           alert("Please connect to the internet!");
@@ -204,16 +212,18 @@ $.sideMenu.menuTable.addEventListener("click", function (e) {
         var whatsApp = require("socialShare");
         whatsApp.whatsappShare();
       }
-     
+
       break;
     case "rate":
       if (OS_ANDROID) {
         Ti.Platform.openURL("market://details?id=com.bd.PasswordManagerPro");
       } else {
-        Ti.Platform.openURL("https://itunes.apple.com/us/app/password-security-manager/id1070748246?ls=1&mt=8");
+        Ti.Platform.openURL(
+          "https://itunes.apple.com/us/app/password-security-manager/id1070748246?ls=1&mt=8",
+        );
       }
       $.drawer.toggleLeft();
-   
+
       break;
   }
 
@@ -223,11 +233,9 @@ $.sideMenu.menuTable.addEventListener("click", function (e) {
 
 $.win.addEventListener("androidback", function () {
   var dialog = Ti.UI.createAlertDialog({
-    buttonNames: [
-      "Confirm", "Cancel"
-    ],
+    buttonNames: ["Confirm", "Cancel"],
     message: "Would you like to exit this App",
-    title: "Exit"
+    title: "Exit",
   });
   dialog.addEventListener("click", function (e) {
     if (e.index === 0) {

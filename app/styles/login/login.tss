@@ -76,26 +76,26 @@
 
 '#submit':{
 	borderWidth: 2,
-	borderColor: 'green',
-	borderRadius: 10,
-	backgroundColor: Alloy.CFG.bgBtnColor,
-	backgroundSelectedColor: Alloy.CFG.bgSelectedColor,
+	borderColor: '#fff',
+	backgroundColor: "#000",
+	backgroundSelectedColor: "#fff",
+	borderRadius: 25,
 	width: 80,
-	height: 50,
-	top:"20",  
+	height: 45,
+	top:20,  
 	color:"#fff" 
 },
 
 
 '#submit[formFactor=tablet]': {
 	borderWidth: 2,
-	borderColor: 'green',
-	borderRadius: 10,
-	backgroundColor: Alloy.CFG.bgBtnColor,
-	backgroundSelectedColor: Alloy.CFG.bgSelectedColor,
+	borderColor: '#fff',
+	backgroundColor: "#000",
+	backgroundSelectedColor: "#fff",
+	borderRadius: 25,
 	width: 150,
 	height: 70,
-	top:"20",  
+	top:0,  
 	color:"#fff" 
 }
 
