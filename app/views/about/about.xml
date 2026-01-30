@@ -1,7 +1,7 @@
 <Alloy>
 	<Window title="About Developer" id="aboutWin" class="container">
 		<View layout="vertical" top='50'>
-			<Label id="title">Diversify LLC</Label>
+			<Label id="title">Diversify Software LLC</Label>
 			<Label id="email" top="10">MD. Motiur Rahman</Label>
 			<Label id="email" top="10">motiur.mbstu@gmail.com</Label>
 

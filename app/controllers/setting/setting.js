@@ -80,3 +80,24 @@ function back() {
   $.off();
   $.destroy();
 }
+
+function hideKeyboard(e) {
+  // Don't hide if user taps inside inputs or button
+  var name = e && e.source && e.source.apiName ? e.source.apiName : "";
+
+  if (
+    name === "Ti.UI.TextField" ||
+    name === "Ti.UI.TextArea" ||
+    name === "Ti.UI.Button"
+  ) {
+    return;
+  }
+
+  // Blur all fields
+  $.cur_pass.blur();
+  $.new_pass.blur();
+  $.re_pass.blur();
+}
+
+// Tap anywhere in window to hide keyboard
+$.settingWin.addEventListener("click", hideKeyboard);
